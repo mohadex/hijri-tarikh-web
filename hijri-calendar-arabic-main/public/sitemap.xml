@@ -1,27 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
   <url>
     <loc>https://taqweemhijri.site/</loc>
-    <lastmod>2024-12-07</lastmod>
+    <lastmod>2025-09-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://taqweemhijri.site/#converter</loc>
+    <lastmod>2025-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://taqweemhijri.site/#calendar</loc>
+    <lastmod>2025-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Information Pages -->
+  <url>
     <loc>https://taqweemhijri.site/about</loc>
-    <lastmod>2024-12-07</lastmod>
+    <lastmod>2025-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://taqweemhijri.site/contact</loc>
-    <lastmod>2024-12-07</lastmod>
+    <lastmod>2025-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+  <!-- Legal Pages -->
   <url>
     <loc>https://taqweemhijri.site/privacy-policy</loc>
-    <lastmod>2024-12-07</lastmod>
+    <lastmod>2025-09-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <!-- Important Calendar Pages -->
+  <url>
+    <loc>https://taqweemhijri.site/ramadan</loc>
+    <lastmod>2025-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://taqweemhijri.site/eid</loc>
+    <lastmod>2025-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
