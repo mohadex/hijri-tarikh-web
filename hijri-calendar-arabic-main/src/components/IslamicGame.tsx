@@ -16,71 +16,71 @@ const questions: Question[] = [
   {
     id: 1,
     image: "/images/kaaba.jpg",
-    question: "ما هو اسم هذا المكان المقدس؟",
-    options: ["الكعبة المشرفة", "المسجد النبوي", "المسجد الأقصى"],
+    question: "What is the name of this holy site?",
+    options: ["The Kaaba", "Al-Masjid an-Nabawi", "Al-Aqsa Mosque"],
     correctAnswer: 0
   },
   {
     id: 2,
     image: "/images/crescent.jpg",
-    question: "ما هو رمز الإسلام الشائع؟",
-    options: ["النجمة", "الهلال والنجمة", "الصليب"],
+    question: "What is the common symbol of Islam?",
+    options: ["Star", "Crescent and Star", "Cross"],
     correctAnswer: 1
   },
   {
     id: 3,
     image: "/images/quran.jpg",
-    question: "ما هو الكتاب المقدس في الإسلام؟",
-    options: ["التوراة", "الإنجيل", "القرآن الكريم"],
+    question: "What is the holy book of Islam?",
+    options: ["Torah", "Bible", "The Holy Quran"],
     correctAnswer: 2
   },
   {
     id: 4,
     image: "/images/mosque.jpg",
-    question: "ما هو اسم مكان عبادة المسلمين؟",
-    options: ["المسجد", "الكنيسة", "المعبد"],
+    question: "What is the Muslim place of worship called?",
+    options: ["Mosque", "Church", "Temple"],
     correctAnswer: 0
   },
   {
     id: 5,
     image: "/images/kaaba.jpg",
-    question: "كم عدد أركان الإسلام؟",
-    options: ["أربعة", "خمسة", "ستة"],
+    question: "How many pillars of Islam are there?",
+    options: ["Four", "Five", "Six"],
     correctAnswer: 1
   },
   {
     id: 6,
     image: "/images/crescent.jpg",
-    question: "في أي شهر هجري يصوم المسلمون؟",
-    options: ["شعبان", "رمضان", "شوال"],
+    question: "In which Islamic month do Muslims fast?",
+    options: ["Sha'ban", "Ramadan", "Shawwal"],
     correctAnswer: 1
   },
   {
     id: 7,
     image: "/images/quran.jpg",
-    question: "كم عدد سور القرآن الكريم؟",
+    question: "How many chapters (Surahs) are in the Quran?",
     options: ["114", "124", "104"],
     correctAnswer: 0
   },
   {
     id: 8,
     image: "/images/mosque.jpg",
-    question: "ما هي القبلة للمسلمين؟",
-    options: ["المسجد النبوي", "الكعبة المشرفة", "المسجد الأقصى"],
+    question: "What is the Qibla (prayer direction) for Muslims?",
+    options: ["Al-Masjid an-Nabawi", "The Kaaba", "Al-Aqsa Mosque"],
     correctAnswer: 1
   },
   {
     id: 9,
     image: "/images/kaaba.jpg",
-    question: "في أي مدينة تقع الكعبة المشرفة؟",
-    options: ["مكة المكرمة", "المدينة المنورة", "القدس"],
+    question: "In which city is the Kaaba located?",
+    options: ["Makkah", "Madinah", "Jerusalem"],
     correctAnswer: 0
   },
   {
     id: 10,
     image: "/images/crescent.jpg",
-    question: "ما هي الصلاة الأولى في اليوم؟",
-    options: ["الظهر", "الفجر", "العصر"],
+    question: "What is the first prayer of the day?",
+    options: ["Dhuhr", "Fajr", "Asr"],
     correctAnswer: 1
   }
 ];
@@ -105,9 +105,9 @@ const IslamicGame = () => {
     if (isCorrect) {
       setScore(score + 1);
       toast({
-        title: `إجابة صحيحة! 🎉 المستوى ${currentLevel}`,
-        description: "أحسنت! إجابة ممتازة - انتقل للمستوى التالي",
-        className: "bg-islamic-green text-white border-islamic-green",
+        title: `Correct Answer! 🎉 Level ${currentLevel}`,
+        description: "Well done! Excellent answer - moving to the next level",
+        className: "bg-green-600 text-white border-green-600",
       });
       
       setTimeout(() => {
@@ -123,8 +123,8 @@ const IslamicGame = () => {
     } else {
       setShowError(true);
       toast({
-        title: "إجابة خاطئة ❌",
-        description: `الإجابة الصحيحة هي: ${questions[currentQuestion].options[questions[currentQuestion].correctAnswer]}`,
+        title: "Wrong Answer ❌",
+        description: `The correct answer is: ${questions[currentQuestion].options[questions[currentQuestion].correctAnswer]}`,
         variant: "destructive",
       });
     }
@@ -157,30 +157,30 @@ const IslamicGame = () => {
 
   if (gameCompleted) {
     return (
-      <section className="py-16 bg-gradient-to-br from-islamic-gold/5 via-background to-islamic-green/5">
+      <section className="py-16 bg-gradient-to-br from-yellow-50 via-background to-green-50">
         <div className="container mx-auto px-4">
-          <Card className="max-w-2xl mx-auto text-center border-islamic-gold/20">
+          <Card className="max-w-2xl mx-auto text-center border-yellow-200">
             <CardHeader>
-              <CardTitle className="text-3xl font-arabic text-islamic-gold">
-                انتهت اللعبة! 🎊
+              <CardTitle className="text-3xl font-bold text-yellow-600">
+                Game Over! 🎊
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="text-6xl font-bold text-islamic-green">
+              <div className="text-6xl font-bold text-green-600">
                 {score}/{questions.length}
               </div>
               <p className="text-xl text-muted-foreground">
                 {score === questions.length 
-                  ? "ممتاز! أجبت على جميع الأسئلة بشكل صحيح!" 
+                  ? "Excellent! You answered all questions correctly!" 
                   : score >= questions.length / 2 
-                  ? "جيد جداً! تحتاج لمراجعة بعض المعلومات"
-                  : "يمكنك المحاولة مرة أخرى لتحسين نتيجتك"}
+                  ? "Very good! You might want to review some information"
+                  : "You can try again to improve your score"}
               </p>
               <Button 
                 onClick={resetGame}
-                className="bg-islamic-blue hover:bg-islamic-blue/90 text-white font-arabic text-lg px-8 py-3"
+                className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3"
               >
-                العب مرة أخرى 🔄
+                Play Again 🔄
               </Button>
             </CardContent>
           </Card>
@@ -190,33 +190,33 @@ const IslamicGame = () => {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-br from-islamic-green/5 via-background to-islamic-blue/5">
+    <section className="py-16 bg-gradient-to-br from-green-50 via-background to-blue-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-4 font-arabic text-islamic-green">
-            لعبة المعرفة الإسلامية 🕌
+          <h2 className="text-3xl font-bold mb-4 text-green-600">
+            Islamic Knowledge Quiz 🕌
           </h2>
           <p className="text-lg text-muted-foreground mb-4">
-            اختبر معلوماتك الإسلامية مع هذه اللعبة التعليمية الممتعة
+            Test your Islamic knowledge with this fun educational game
           </p>
           <div className="flex justify-center items-center gap-6 text-lg mb-4">
-            <span className="text-islamic-blue font-medium">
-              المستوى {currentLevel} من 10
+            <span className="text-blue-600 font-medium">
+              Level {currentLevel} of 10
             </span>
-            <span className="text-islamic-gold font-bold">
-              النتيجة: {score}
+            <span className="text-yellow-600 font-bold">
+              Score: {score}
             </span>
           </div>
           
           {/* Progress Bar */}
           <div className="max-w-md mx-auto mb-4">
             <div className="flex justify-between items-center mb-2">
-              <span className="text-sm text-muted-foreground">التقدم</span>
-              <span className="text-sm text-islamic-green font-medium">{currentLevel}/10</span>
+              <span className="text-sm text-muted-foreground">Progress</span>
+              <span className="text-sm text-green-600 font-medium">{currentLevel}/10</span>
             </div>
             <div className="w-full bg-muted rounded-full h-2">
               <div 
-                className="bg-islamic-green h-2 rounded-full transition-all duration-500"
+                className="bg-green-600 h-2 rounded-full transition-all duration-500"
                 style={{ width: `${(currentLevel / 10) * 100}%` }}
               ></div>
             </div>
@@ -228,11 +228,11 @@ const IslamicGame = () => {
             <div className="flex justify-center mb-4">
               <img 
                 src={questions[currentQuestion].image} 
-                alt="صورة السؤال"
-                className="w-64 h-48 object-cover rounded-lg border-2 border-islamic-gold/30 shadow-lg"
+                alt="Question image"
+                className="w-64 h-48 object-cover rounded-lg border-2 border-yellow-300/30 shadow-lg"
               />
             </div>
-            <CardTitle className="text-xl font-arabic text-center text-foreground">
+            <CardTitle className="text-xl text-center text-foreground">
               {questions[currentQuestion].question}
             </CardTitle>
           </CardHeader>
@@ -244,7 +244,7 @@ const IslamicGame = () => {
                   variant={getButtonVariant(index)}
                   onClick={() => handleAnswerClick(index)}
                   disabled={selectedAnswer !== null}
-                  className="w-full text-right font-arabic text-lg p-4 h-auto transition-all duration-200 hover:scale-105"
+                  className="w-full text-left text-lg p-4 h-auto transition-all duration-200 hover:scale-105"
                 >
                   {option}
                 </Button>
@@ -255,9 +255,9 @@ const IslamicGame = () => {
               <div className="mt-6 text-center">
                 <Button 
                   onClick={tryAgain}
-                  className="bg-islamic-blue hover:bg-islamic-blue/90 text-white font-arabic text-lg px-6 py-2"
+                  className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-2"
                 >
-                  حاول مرة أخرى 🔄
+                  Try Again 🔄
                 </Button>
               </div>
             )}

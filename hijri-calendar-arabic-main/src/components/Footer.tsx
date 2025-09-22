@@ -8,42 +8,40 @@ const Footer = () => {
           
           {/* Logo and Description */}
           <div className="text-center md:text-start">
-            <h3 className="text-xl font-bold font-arabic mb-2 bg-gradient-to-r from-islamic-green to-islamic-blue bg-clip-text text-transparent">
-              التقويم الهجري
-            </h3>
+            <h3 className="text-lg font-bold mb-4">Taqweem Hijri</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              موقع شامل لعرض التاريخ الهجري والميلادي مع أدوات التحويل والتقويم الشهري
+              A comprehensive platform for displaying Hijri and Gregorian dates with conversion tools and monthly calendar
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="text-center">
-            <h4 className="font-semibold mb-4 font-arabic">روابط سريعة</h4>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
             <div className="space-y-2">
               <a href="#" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
-                الرئيسية
+                Home
               </a>
               <a href="#converter" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
-                تحويل التاريخ
+                Date Converter
               </a>
               <a href="#calendar" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
-                التقويم الشهري
+                Monthly Calendar
               </a>
             </div>
           </div>
 
           {/* Legal Links */}
           <div className="text-center md:text-end">
-            <h4 className="font-semibold mb-4 font-arabic">معلومات قانونية</h4>
+            <h4 className="font-semibold mb-4">Legal</h4>
             <div className="space-y-2">
               <a href="/privacy" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
-                سياسة الخصوصية
+                Privacy Policy
               </a>
               <a href="/about" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
-                من نحن
+                About Us
               </a>
               <a href="/contact" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
-                اتصل بنا
+                Contact Us
               </a>
             </div>
           </div>
@@ -52,12 +50,12 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t mt-8 pt-6 text-center">
           <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-            <span>تم تطوير الموقع بـ</span>
+            <span>Made with</span>
             <Heart className="h-4 w-4 text-red-500 fill-current" />
-            <span>• جميع الحقوق محفوظة {new Date().getFullYear()}</span>
+            <span>• All rights reserved {new Date().getFullYear()}</span>
           </div>
           <p className="text-xs text-muted-foreground mt-2">
-            ملاحظة: هذا الموقع للأغراض التعليمية والتوضيحية. للحصول على تواريخ دقيقة، يرجى مراجعة المصادر الرسمية.
+            Note: This website is for educational and illustrative purposes. For accurate dates, please refer to official sources.
           </p>
         </div>
       </div>

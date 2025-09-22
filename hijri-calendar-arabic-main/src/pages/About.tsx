@@ -1,53 +1,49 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Users, Target, Heart } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background font-arabic">
-      <Header />
-      
+    <div className="min-h-screen">
       <main className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 font-arabic bg-gradient-to-r from-islamic-green via-islamic-blue to-islamic-gold bg-clip-text text-transparent">
-              من نحن
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-islamic-green via-islamic-blue to-islamic-gold bg-clip-text text-transparent">
+              About Us
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              موقع متخصص في التقويم الهجري والتحويل بين التواريخ الهجرية والميلادية
+              A specialized platform for the Taqweem Hijri calendar and conversion between Hijri and Gregorian dates
             </p>
           </div>
 
           <div className="space-y-8">
             <Card className="border-islamic-blue/20">
               <CardHeader>
-                <CardTitle className="text-2xl font-arabic text-islamic-green flex items-center gap-3">
+                <CardTitle className="text-2xl text-islamic-green flex items-center gap-3">
                   <Target className="h-8 w-8" />
-                  رؤيتنا
+                  Our Vision
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-lg leading-relaxed">
                 <p>
-                  نسعى لأن نكون المرجع الأول والأكثر دقة للتقويم الهجري على الإنترنت، 
-                  حيث نقدم خدمات شاملة ودقيقة للمسلمين حول العالم لمساعدتهم في معرفة التواريخ 
-                  الهجرية والمناسبات الدينية المهمة.
+                  We strive to be the first and most accurate reference for the Taqweem Hijri calendar on the internet,
+                  providing comprehensive and precise services to Muslims around the world to help them know
+                  Hijri dates and important religious occasions.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="border-islamic-blue/20">
               <CardHeader>
-                <CardTitle className="text-2xl font-arabic text-islamic-green flex items-center gap-3">
+                <CardTitle className="text-2xl text-islamic-green flex items-center gap-3">
                   <Heart className="h-8 w-8" />
-                  رسالتنا
+                  Our Mission
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-lg leading-relaxed">
                 <p>
-                  تقديم أدوات عملية ودقيقة للتحويل بين التقويم الهجري والميلادي، 
-                  مع واجهة سهلة الاستخدام باللغة العربية، وإثراء المحتوى بمعلومات 
-                  تعليمية عن التراث الإسلامي والمناسبات الدينية.
+                  To provide practical and accurate tools for converting between the Hijri and Gregorian calendars,
+                  with an easy-to-use interface in English, and enriching the content with educational information
+                  about Islamic heritage and religious occasions.
                 </p>
               </CardContent>
             </Card>
@@ -55,28 +51,28 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="border-islamic-gold/20">
                 <CardHeader>
-                  <CardTitle className="text-xl font-arabic text-islamic-gold flex items-center gap-3">
+                  <CardTitle className="text-xl text-islamic-gold flex items-center gap-3">
                     <Calendar className="h-6 w-6" />
-                    خدماتنا
+                    Our Services
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-islamic-green rounded-full mt-2 flex-shrink-0"></span>
-                      <span>عرض التاريخ الهجري والميلادي الحالي</span>
+                      <span>Display current Hijri and Gregorian dates</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-islamic-green rounded-full mt-2 flex-shrink-0"></span>
-                      <span>تحويل التواريخ بين النظامين</span>
+                      <span>Convert dates between both systems</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-islamic-green rounded-full mt-2 flex-shrink-0"></span>
-                      <span>التقويم الشهري التفاعلي</span>
+                      <span>Interactive monthly calendar</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-islamic-green rounded-full mt-2 flex-shrink-0"></span>
-                      <span>لعبة تعليمية عن الثقافة الإسلامية</span>
+                      <span>Educational game about Islamic culture</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -84,28 +80,28 @@ const About = () => {
 
               <Card className="border-islamic-gold/20">
                 <CardHeader>
-                  <CardTitle className="text-xl font-arabic text-islamic-gold flex items-center gap-3">
+                  <CardTitle className="text-xl text-islamic-gold flex items-center gap-3">
                     <Users className="h-6 w-6" />
-                    قيمنا
+                    Our Values
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-islamic-blue rounded-full mt-2 flex-shrink-0"></span>
-                      <span>الدقة والموثوقية في المعلومات</span>
+                      <span>Accuracy and reliability of information</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-islamic-blue rounded-full mt-2 flex-shrink-0"></span>
-                      <span>سهولة الاستخدام والوصول</span>
+                      <span>Ease of use and accessibility</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-islamic-blue rounded-full mt-2 flex-shrink-0"></span>
-                      <span>احترام التراث الإسلامي</span>
+                      <span>Respect for Islamic heritage</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-islamic-blue rounded-full mt-2 flex-shrink-0"></span>
-                      <span>التحديث المستمر والتطوير</span>
+                      <span>Continuous updates and development</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -114,40 +110,40 @@ const About = () => {
 
             <Card className="border-islamic-green/20">
               <CardHeader>
-                <CardTitle className="text-2xl font-arabic text-islamic-green">
-                  التقويم الهجري - أهميته وتاريخه
+                <CardTitle className="text-2xl text-islamic-green">
+                  The Taqweem Hijri - Its Importance and History
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4 text-lg leading-relaxed">
                 <p>
-                  التقويم الهجري هو التقويم الإسلامي الذي يعتمد على دورة القمر، ويبدأ من 
-                  هجرة الرسول محمد صلى الله عليه وسلم من مكة إلى المدينة في عام 622 ميلادية.
+                  The Taqweem Hijri is the Islamic calendar based on the lunar cycle, beginning from 
+                  the migration of the Prophet Muhammad (peace be upon him) from Mecca to Medina in 622 CE.
                 </p>
                 <p>
-                  يتكون التقويم الهجري من 12 شهراً قمرياً، وتبلغ السنة الهجرية حوالي 354 يوماً، 
-                  مما يجعلها أقصر من السنة الميلادية بحوالي 11 يوماً.
+                  The Taqweem Hijri consists of 12 lunar months, with a Hijri year being approximately 354 days,
+                  making it about 11 days shorter than the Gregorian year.
                 </p>
                 <p>
-                  هذا التقويم له أهمية كبيرة في الحياة الإسلامية، حيث يحدد مواعيد الصيام 
-                  والحج والأعياد الدينية، ولذلك نحن نسعى لتقديم أدوات دقيقة لحسابه ومتابعته.
+                  This calendar holds great importance in Islamic life as it determines the timings of fasting,
+                  Hajj, and religious holidays, which is why we strive to provide accurate tools for its calculation and tracking.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="border-islamic-blue/20">
               <CardHeader>
-                <CardTitle className="text-2xl font-arabic text-islamic-green">
-                  فريق العمل
+                <CardTitle className="text-2xl text-islamic-green">
+                  Our Team
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-lg leading-relaxed">
                 <p>
-                  نحن فريق من المتخصصين في التكنولوجيا والدراسات الإسلامية، نعمل بشغف 
-                  على تطوير أدوات رقمية تخدم المجتمع المسلم وتساعد في الحفاظ على التراث الإسلامي.
+                  We are a team of specialists in technology and Islamic studies, passionately working
+                  to develop digital tools that serve the Muslim community and help preserve Islamic heritage.
                 </p>
                 <p className="mt-4">
-                  نستخدم أحدث التقنيات والخوارزميات لضمان دقة الحسابات الفلكية والتحويلات 
-                  بين التقويمين، مع مراعاة الاختلافات الطفيفة في بداية الأشهر حسب المناطق الجغرافية.
+                  We use the latest technologies and algorithms to ensure the accuracy of astronomical calculations
+                  and conversions between calendars, taking into account minor variations in the start of months across different geographical regions.
                 </p>
               </CardContent>
             </Card>
@@ -155,24 +151,24 @@ const About = () => {
             <Card className="border-islamic-gold/20 bg-islamic-gold/5">
               <CardContent className="pt-6">
                 <div className="text-center">
-                  <h3 className="text-xl font-arabic text-islamic-gold mb-4">
-                    شاركنا رأيك واقتراحاتك
+                  <h3 className="text-xl text-islamic-gold mb-4">
+                    Share Your Feedback and Suggestions
                   </h3>
                   <p className="text-muted-foreground mb-6">
-                    نحن نقدر ملاحظاتكم ونسعى للتحسين المستمر لخدماتنا
+                    We value your feedback and strive for continuous improvement of our services
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a 
                       href="/contact"
                       className="inline-flex items-center justify-center px-6 py-3 bg-islamic-gold text-foreground rounded-lg hover:bg-islamic-gold/90 transition-colors font-medium"
                     >
-                      تواصل معنا
+                      Contact Us
                     </a>
                     <a 
                       href="/"
                       className="inline-flex items-center justify-center px-6 py-3 border border-islamic-blue text-islamic-blue rounded-lg hover:bg-islamic-blue/10 transition-colors font-medium"
                     >
-                      العودة للرئيسية
+                      Back to Home
                     </a>
                   </div>
                 </div>
@@ -181,8 +177,6 @@ const About = () => {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };

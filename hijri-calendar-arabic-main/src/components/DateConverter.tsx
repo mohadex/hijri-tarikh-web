@@ -16,7 +16,7 @@ const DateConverter = () => {
 
   const convertDate = () => {
     if (!gregorianDate && !hijriDate) {
-      setError("يرجى إدخال تاريخ للتحويل");
+      setError("Please enter a date to convert");
       return;
     }
 
@@ -27,21 +27,21 @@ const DateConverter = () => {
       if (conversionType === "gToH" && gregorianDate) {
         // Convert Gregorian to Hijri
         const hijriMoment = moment(gregorianDate);
-        const result = hijriMoment.format('iD iMMMM iYYYY') + " هـ";
+        const result = hijriMoment.format('MMMM iD, iYYYY') + " AH";
         setConvertedResult(result);
       } else if (conversionType === "hToG" && hijriDate) {
         // Convert Hijri to Gregorian
         const parts = hijriDate.split('-');
         if (parts.length === 3) {
           const gregorianMoment = moment(`${parts[0]}-${parts[1]}-${parts[2]}`, 'iYYYY-iMM-iDD');
-          const result = gregorianMoment.format('D MMMM YYYY') + " م";
+          const result = gregorianMoment.format('MMMM D, YYYY') + " AD";
           setConvertedResult(result);
         } else {
-          setError("صيغة التاريخ الهجري غير صحيحة (استخدم: YYYY-MM-DD)");
+          setError("Invalid Hijri date format (use: YYYY-MM-DD)");
         }
       }
     } catch (err) {
-      setError("حدث خطأ أثناء تحويل التاريخ");
+      setError("An error occurred while converting the date");
     } finally {
       setIsLoading(false);
     }
@@ -61,9 +61,9 @@ const DateConverter = () => {
         <div className="max-w-4xl mx-auto">
           <Card className="border-islamic-green/20">
             <CardHeader className="text-center">
-              <CardTitle className="font-arabic text-2xl">أداة تحويل التاريخ</CardTitle>
+              <CardTitle className="text-2xl">Date Converter</CardTitle>
               <CardDescription>
-                اختر نوع التحويل وأدخل التاريخ للحصول على النتيجة
+                Select conversion type and enter a date to get the result
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -74,7 +74,7 @@ const DateConverter = () => {
                   onClick={() => setConversionType("gToH")}
                   className="min-w-32"
                 >
-                  ميلادي إلى هجري
+                  Gregorian to Hijri
                 </Button>
                 <Button
                   variant="ghost"
@@ -89,7 +89,7 @@ const DateConverter = () => {
                   onClick={() => setConversionType("hToG")}
                   className="min-w-32"
                 >
-                  هجري إلى ميلادي
+                  Hijri to Gregorian
                 </Button>
               </div>
 
@@ -97,41 +97,41 @@ const DateConverter = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 {conversionType === "gToH" ? (
                   <div className="space-y-2">
-                    <Label htmlFor="gregorian-input" className="font-arabic">التاريخ الميلادي</Label>
+                    <Label htmlFor="gregorian-input">Gregorian Date</Label>
                     <Input
                       id="gregorian-input"
                       type="date"
                       value={gregorianDate}
                       onChange={(e) => setGregorianDate(e.target.value)}
-                      className="text-right"
+                      className="text-left"
                     />
                   </div>
                 ) : (
                   <div className="space-y-2">
-                    <Label htmlFor="hijri-input" className="font-arabic">التاريخ الهجري</Label>
+                    <Label htmlFor="hijri-input">Hijri Date</Label>
                     <Input
                       id="hijri-input"
                       type="text"
-                      placeholder="YYYY-MM-DD (مثال: 1445-01-15)"
+                      placeholder="YYYY-MM-DD (e.g., 1445-01-15)"
                       value={hijriDate}
                       onChange={(e) => setHijriDate(e.target.value)}
-                      className="text-right"
+                      className="text-left"
                     />
                   </div>
                 )}
 
                 <div className="space-y-2">
-                  <Label className="font-arabic">النتيجة</Label>
+                  <Label>Result</Label>
                   <div className="p-3 bg-muted/50 rounded-md min-h-[40px] flex items-center justify-center text-center">
                     {isLoading ? (
                       <div className="flex items-center gap-2">
                         <Loader2 className="h-4 w-4 animate-spin" />
-                        <span>جاري التحويل...</span>
+                        <span>Converting...</span>
                       </div>
                     ) : convertedResult ? (
-                      <span className="font-arabic text-lg">{convertedResult}</span>
+                      <span className="text-lg">{convertedResult}</span>
                     ) : (
-                      <span className="text-muted-foreground">النتيجة ستظهر هنا</span>
+                      <span className="text-muted-foreground">Result will appear here</span>
                     )}
                   </div>
                 </div>
@@ -153,10 +153,10 @@ const DateConverter = () => {
                   {isLoading ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      جاري التحويل...
+                      Converting...
                     </>
                   ) : (
-                    "تحويل التاريخ"
+                    "Convert Date"
                   )}
                 </Button>
               </div>

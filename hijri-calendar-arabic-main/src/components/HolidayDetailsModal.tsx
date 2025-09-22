@@ -31,11 +31,11 @@ const HolidayDetailsModal = ({ holiday, isOpen, onClose }: HolidayDetailsModalPr
   const getCategoryLabel = (category: string) => {
     switch (category) {
       case 'major':
-        return 'مناسبة كبرى';
+        return 'Major Occasion';
       case 'special':
-        return 'مناسبة خاصة';
+        return 'Special Occasion';
       default:
-        return 'مناسبة';
+        return 'Occasion';
     }
   };
 
@@ -47,14 +47,14 @@ const HolidayDetailsModal = ({ holiday, isOpen, onClose }: HolidayDetailsModalPr
             <div className="p-2 rounded-full bg-islamic-gold/10 text-islamic-gold">
               <Heart className="h-5 w-5" />
             </div>
-            <DialogTitle className="text-2xl font-bold font-arabic text-right">
+            <DialogTitle className="text-2xl font-bold text-left">
               {holiday.name}
             </DialogTitle>
           </div>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Calendar className="h-4 w-4" />
-              <span>{holiday.day} من {holiday.month === 1 ? 'محرم' : holiday.month === 3 ? 'ربيع الأول' : holiday.month === 7 ? 'رجب' : holiday.month === 8 ? 'شعبان' : holiday.month === 9 ? 'رمضان' : holiday.month === 10 ? 'شوال' : holiday.month === 12 ? 'ذو الحجة' : ''}</span>
+              <span>{holiday.month === 1 ? 'Muharram' : holiday.month === 3 ? "Rabi' al-Awwal" : holiday.month === 7 ? 'Rajab' : holiday.month === 8 ? "Sha'ban" : holiday.month === 9 ? 'Ramadan' : holiday.month === 10 ? 'Shawwal' : holiday.month === 12 ? 'Dhu al-Hijjah' : ''} {holiday.day}, {new Date().getFullYear()} AH</span>
             </div>
             <Badge variant="outline" className={getCategoryStyle(holiday.category)}>
               {getCategoryLabel(holiday.category)}
@@ -66,7 +66,7 @@ const HolidayDetailsModal = ({ holiday, isOpen, onClose }: HolidayDetailsModalPr
           <div className="space-y-6">
             {/* Description */}
             <Card className="p-4 bg-gradient-to-r from-islamic-green/5 to-islamic-blue/5 border-islamic-green/20">
-              <p className="text-lg text-center font-arabic leading-relaxed">
+              <p className="text-lg text-center leading-relaxed">
                 {holiday.description}
               </p>
             </Card>
@@ -75,7 +75,7 @@ const HolidayDetailsModal = ({ holiday, isOpen, onClose }: HolidayDetailsModalPr
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <BookOpen className="h-5 w-5 text-islamic-green" />
-                <h3 className="text-xl font-bold font-arabic">الأصل والتاريخ</h3>
+                <h3 className="text-xl font-bold">Origin & History</h3>
               </div>
               <Card className="p-4">
                 <p className="text-foreground leading-relaxed text-right">
@@ -88,7 +88,7 @@ const HolidayDetailsModal = ({ holiday, isOpen, onClose }: HolidayDetailsModalPr
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <Star className="h-5 w-5 text-islamic-gold" />
-                <h3 className="text-xl font-bold font-arabic">الأهمية التاريخية</h3>
+                <h3 className="text-xl font-bold">Historical Significance</h3>
               </div>
               <Card className="p-4">
                 <p className="text-foreground leading-relaxed text-right">
@@ -101,7 +101,7 @@ const HolidayDetailsModal = ({ holiday, isOpen, onClose }: HolidayDetailsModalPr
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <Heart className="h-5 w-5 text-islamic-blue" />
-                <h3 className="text-xl font-bold font-arabic">الأهمية الدينية</h3>
+                <h3 className="text-xl font-bold">Religious Importance</h3>
               </div>
               <Card className="p-4">
                 <p className="text-foreground leading-relaxed text-right">
@@ -114,7 +114,7 @@ const HolidayDetailsModal = ({ holiday, isOpen, onClose }: HolidayDetailsModalPr
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <Calendar className="h-5 w-5 text-islamic-green" />
-                <h3 className="text-xl font-bold font-arabic">لماذا نحتفل؟</h3>
+                <h3 className="text-xl font-bold">Why We Celebrate</h3>
               </div>
               <Card className="p-4">
                 <p className="text-foreground leading-relaxed text-right">
@@ -127,10 +127,10 @@ const HolidayDetailsModal = ({ holiday, isOpen, onClose }: HolidayDetailsModalPr
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <Star className="h-5 w-5 text-islamic-gold" />
-                <h3 className="text-xl font-bold font-arabic">التقاليد والسنن</h3>
+                <h3 className="text-xl font-bold">Traditions & Practices</h3>
               </div>
               <Card className="p-4">
-                <ul className="space-y-2 text-right">
+                <ul className="space-y-2">
                   {holiday.detailedInfo.traditions.map((tradition, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <div className="w-2 h-2 rounded-full bg-islamic-gold mt-2 flex-shrink-0"></div>
@@ -145,13 +145,13 @@ const HolidayDetailsModal = ({ holiday, isOpen, onClose }: HolidayDetailsModalPr
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <BookOpen className="h-5 w-5 text-islamic-blue" />
-                <h3 className="text-xl font-bold font-arabic">المراجع الإسلامية</h3>
+                <h3 className="text-xl font-bold">Islamic References</h3>
               </div>
               <Card className="p-4 bg-gradient-to-r from-islamic-blue/5 to-islamic-green/5 border-islamic-blue/20">
-                <ul className="space-y-3 text-right">
+                <ul className="space-y-3">
                   {holiday.detailedInfo.islamicReferences.map((reference, index) => (
                     <li key={index} className="p-3 bg-background/50 rounded-lg border border-border/50">
-                      <span className="text-foreground leading-relaxed font-arabic text-sm">
+                      <span className="text-foreground leading-relaxed text-sm">
                         {reference}
                       </span>
                     </li>

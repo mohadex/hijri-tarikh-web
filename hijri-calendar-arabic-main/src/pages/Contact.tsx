@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -27,12 +25,14 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Here you would typically send the form data to your backend
+    console.log('Form submitted:', formData);
     
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "خطأ في الإرسال",
-        description: "يرجى ملء جميع الحقول المطلوبة",
+        title: "Submission Error",
+        description: "Please fill in all required fields",
         variant: "destructive",
       });
       return;
@@ -40,8 +40,8 @@ const Contact = () => {
 
     // Simulate form submission
     toast({
-      title: "تم إرسال الرسالة بنجاح! 📧",
-      description: "شكراً لتواصلك معنا. سنرد عليك في أقرب وقت ممكن",
+      title: "Message sent successfully! ",
+      description: "Thank you for contacting us. We'll get back to you as soon as possible.",
       className: "bg-islamic-green text-white border-islamic-green",
     });
 
@@ -55,17 +55,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background font-arabic">
-      <Header />
-      
+    <div className="min-h-screen bg-background">
       <main className="py-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 font-arabic bg-gradient-to-r from-islamic-green via-islamic-blue to-islamic-gold bg-clip-text text-transparent">
-              اتصل بنا
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-islamic-green via-islamic-blue to-islamic-gold bg-clip-text text-transparent">
+              Contact Us
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              نحن هنا لمساعدتك! لا تتردد في التواصل معنا لأي استفسار أو اقتراح
+              We're here to help! Feel free to contact us with any questions or suggestions
             </p>
           </div>
 
@@ -74,21 +72,21 @@ const Contact = () => {
             <div className="lg:col-span-1 space-y-6">
               <Card className="border-islamic-blue/20">
                 <CardHeader>
-                  <CardTitle className="text-xl font-arabic text-islamic-green flex items-center gap-3">
+                  <CardTitle className="text-xl text-islamic-green flex items-center gap-3">
                     <MessageSquare className="h-6 w-6" />
-                    معلومات التواصل
+                    Contact Information
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-start gap-4">
                     <Mail className="h-5 w-5 text-islamic-blue mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">البريد الإلكتروني</h4>
+                      <h4 className="font-semibold mb-1">Email</h4>
                       <a 
-                        href="mailto:info@hijricalendar.com" 
+                        href="mailto:info@taqweemhijri.site" 
                         className="text-muted-foreground hover:text-islamic-blue transition-colors"
                       >
-                        info@hijricalendar.com
+                        info@taqweemhijri.site
                       </a>
                     </div>
                   </div>
@@ -96,18 +94,18 @@ const Contact = () => {
                   <div className="flex items-start gap-4">
                     <Phone className="h-5 w-5 text-islamic-blue mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">الهاتف</h4>
-                      <p className="text-muted-foreground">+966 50 123 4567</p>
+                      <h4 className="font-semibold mb-1">Phone</h4>
+                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
                     <MapPin className="h-5 w-5 text-islamic-blue mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">العنوان</h4>
+                      <h4 className="font-semibold mb-1">Address</h4>
                       <p className="text-muted-foreground">
-                        المملكة العربية السعودية<br />
-                        الرياض، حي الملك فهد
+                        Saudi Arabia<br />
+                        Riyadh, King Fahd District
                       </p>
                     </div>
                   </div>
@@ -115,10 +113,10 @@ const Contact = () => {
                   <div className="flex items-start gap-4">
                     <Clock className="h-5 w-5 text-islamic-blue mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">ساعات العمل</h4>
+                      <h4 className="font-semibold mb-1">Working Hours</h4>
                       <p className="text-muted-foreground">
-                        الأحد - الخميس: 9:00 ص - 6:00 م<br />
-                        الجمعة - السبت: مغلق
+                        Sunday - Thursday: 9:00 AM - 6:00 PM<br />
+                        Friday - Saturday: Closed
                       </p>
                     </div>
                   </div>
@@ -127,22 +125,22 @@ const Contact = () => {
 
               <Card className="border-islamic-gold/20 bg-islamic-gold/5">
                 <CardHeader>
-                  <CardTitle className="text-lg font-arabic text-islamic-gold">
-                    الأسئلة الشائعة
+                  <CardTitle className="text-lg text-islamic-gold">
+                    Frequently Asked Questions
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4 text-sm">
                     <div>
-                      <h5 className="font-semibold mb-2">كيف يتم حساب التاريخ الهجري؟</h5>
+                      <h5 className="font-semibold mb-2">How is the Hijri date calculated?</h5>
                       <p className="text-muted-foreground">
-                        نستخدم خوارزميات فلكية دقيقة تعتمد على دورة القمر لحساب التواريخ الهجرية.
+                        We use precise astronomical algorithms based on the lunar cycle to calculate Hijri dates.
                       </p>
                     </div>
                     <div>
-                      <h5 className="font-semibold mb-2">هل البيانات دقيقة؟</h5>
+                      <h5 className="font-semibold mb-2">Is the data accurate?</h5>
                       <p className="text-muted-foreground">
-                        نعم، نستخدم مصادر موثقة ونحدث البيانات بانتظام لضمان الدقة.
+                        Yes, we use reliable sources and regularly update the data to ensure accuracy.
                       </p>
                     </div>
                   </div>
@@ -154,33 +152,32 @@ const Contact = () => {
             <div className="lg:col-span-2">
               <Card className="border-islamic-green/20">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-arabic text-islamic-green">
-                    أرسل لنا رسالة
+                  <CardTitle className="text-2xl text-islamic-green">
+                    Send Us a Message
                   </CardTitle>
                   <p className="text-muted-foreground">
-                    املأ النموذج أدناه وسنتواصل معك في أقرب وقت ممكن
+                    Fill out the form below and we'll get back to you as soon as possible
                   </p>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name" className="text-right font-arabic">
-                          الاسم الكامل *
+                        <Label htmlFor="name">
+                          Full Name *
                         </Label>
                         <Input
                           id="name"
                           name="name"
                           value={formData.name}
                           onChange={handleInputChange}
-                          placeholder="اكتب اسمك الكامل"
-                          className="text-right"
+                          placeholder="Enter your full name"
                           required
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email" className="text-right font-arabic">
-                          البريد الإلكتروني *
+                        <Label htmlFor="email">
+                          Email Address *
                         </Label>
                         <Input
                           id="email"
@@ -189,37 +186,35 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleInputChange}
                           placeholder="example@email.com"
-                          className="text-right"
                           required
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="subject" className="text-right font-arabic">
-                        موضوع الرسالة
+                      <Label htmlFor="subject">
+                        Subject
                       </Label>
                       <Input
                         id="subject"
                         name="subject"
                         value={formData.subject}
                         onChange={handleInputChange}
-                        placeholder="اكتب موضوع رسالتك"
-                        className="text-right"
+                        placeholder="Enter message subject"
                       />
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message" className="text-right font-arabic">
-                        نص الرسالة *
+                      <Label htmlFor="message">
+                        Message *
                       </Label>
                       <Textarea
                         id="message"
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
-                        placeholder="اكتب رسالتك هنا..."
-                        className="text-right min-h-[120px]"
+                        placeholder="Type your message here..."
+                        className="min-h-[120px]"
                         required
                       />
                     </div>
@@ -227,9 +222,9 @@ const Contact = () => {
                     <div className="flex justify-end">
                       <Button 
                         type="submit"
-                        className="bg-islamic-green hover:bg-islamic-green/90 text-white font-arabic text-lg px-8 py-3"
+                        className="bg-islamic-green hover:bg-islamic-green/90 text-white text-lg px-8 py-3"
                       >
-                        إرسال الرسالة 📧
+                        Send Message 📧
                       </Button>
                     </div>
                   </form>
@@ -239,28 +234,28 @@ const Contact = () => {
               {/* Additional Support Information */}
               <Card className="mt-6 border-islamic-blue/20">
                 <CardHeader>
-                  <CardTitle className="text-xl font-arabic text-islamic-blue">
-                    طرق أخرى للحصول على المساعدة
+                  <CardTitle className="text-xl text-islamic-blue">
+                    Other Ways to Get Help
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="text-center p-4 border border-islamic-gold/20 rounded-lg">
-                      <h4 className="font-semibold mb-2 text-islamic-gold">المساعدة السريعة</h4>
+                      <h4 className="font-semibold mb-2 text-islamic-gold">Quick Help</h4>
                       <p className="text-sm text-muted-foreground mb-4">
-                        للاستفسارات البسيطة حول استخدام الموقع
+                        For simple questions about using the site
                       </p>
                       <Button variant="outline" className="border-islamic-gold text-islamic-gold hover:bg-islamic-gold/10">
-                        دليل الاستخدام
+                        User Guide
                       </Button>
                     </div>
                     <div className="text-center p-4 border border-islamic-green/20 rounded-lg">
-                      <h4 className="font-semibold mb-2 text-islamic-green">تقرير خطأ</h4>
+                      <h4 className="font-semibold mb-2 text-islamic-green">Report an Issue</h4>
                       <p className="text-sm text-muted-foreground mb-4">
-                        إذا واجهت مشكلة تقنية في الموقع
+                        If you encounter a technical issue on the site
                       </p>
                       <Button variant="outline" className="border-islamic-green text-islamic-green hover:bg-islamic-green/10">
-                        الإبلاغ عن خطأ
+                        Report a Bug
                       </Button>
                     </div>
                   </div>
@@ -270,8 +265,6 @@ const Contact = () => {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };

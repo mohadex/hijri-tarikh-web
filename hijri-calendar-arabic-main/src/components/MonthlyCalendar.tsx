@@ -15,11 +15,11 @@ const MonthlyCalendar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const hijriMonths = [
-    "محرم", "صفر", "ربيع الأول", "ربيع الآخر", "جمادى الأولى", "جمادى الآخرة",
-    "رجب", "شعبان", "رمضان", "شوال", "ذو القعدة", "ذو الحجة"
+    "Muharram", "Safar", "Rabi' al-Awwal", "Rabi' al-Thani", "Jumada al-Awwal", "Jumada al-Thani",
+    "Rajab", "Sha'ban", "Ramadan", "Shawwal", "Dhu al-Qi'dah", "Dhu al-Hijjah"
   ];
 
-  const weekDays = ["أحد", "اثنين", "ثلاثاء", "أربعاء", "خميس", "جمعة", "سبت"];
+  const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   // Check if a day has a holiday
   const getHoliday = (day: number) => {
@@ -99,7 +99,7 @@ const MonthlyCalendar = () => {
   return (
     <section id="calendar" className="py-12 bg-muted/30">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 font-arabic">التقويم الشهري</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">Monthly Calendar</h2>
         
         <Card className="max-w-4xl mx-auto p-6">
           {/* Calendar Header */}
@@ -111,12 +111,12 @@ const MonthlyCalendar = () => {
               className="h-10 w-10"
               disabled={loading || currentMonth == null}
             >
-              <ChevronRight className="h-4 w-4" />
+              <ChevronLeft className="h-4 w-4" />
             </Button>
             
             <div className="text-center">
-              <h3 className="text-2xl font-bold font-arabic text-primary">
-                {currentMonth ? hijriMonths[currentMonth - 1] : "—"} {currentYear ?? ""} {currentYear ? "هـ" : ""}
+              <h3 className="text-2xl font-bold text-primary">
+                {currentMonth ? hijriMonths[currentMonth - 1] : "—"} {currentYear ?? ""} {currentYear ? "AH" : ""}
               </h3>
             </div>
             
@@ -127,7 +127,7 @@ const MonthlyCalendar = () => {
               className="h-10 w-10"
               disabled={loading || currentMonth == null}
             >
-              <ChevronLeft className="h-4 w-4" />
+              <ChevronRight className="h-4 w-4" />
             </Button>
           </div>
 
@@ -162,11 +162,9 @@ const MonthlyCalendar = () => {
                 >
                   {day && (
                     <>
-                      <span className="font-arabic">
-                        {day}
-                      </span>
+                      <span>{day}</span>
                       {holiday && (
-                        <div className="absolute bottom-0 left-0 right-0 bg-islamic-gold/30 rounded-b-lg px-1 py-0.5 text-xs text-center font-arabic text-islamic-gold truncate">
+                        <div className="absolute bottom-0 left-0 right-0 bg-islamic-gold/30 rounded-b-lg px-1 py-0.5 text-xs text-center text-islamic-gold truncate">
                           {holiday.name.length > 12 ? holiday.name.substring(0, 12) + '...' : holiday.name}
                         </div>
                       )}
@@ -181,15 +179,15 @@ const MonthlyCalendar = () => {
           <div className="flex justify-center gap-6 mt-6 text-sm">
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 bg-calendar-today rounded"></div>
-              <span>اليوم</span>
+              <span>Today</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 bg-islamic-gold/20 border border-islamic-gold/50 rounded"></div>
-              <span>المناسبات الإسلامية</span>
+              <span>Islamic Events</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 bg-calendar-weekend rounded"></div>
-              <span>نهاية الأسبوع</span>
+              <span>Weekend</span>
             </div>
           </div>
 

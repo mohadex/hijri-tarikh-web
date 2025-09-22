@@ -1,55 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Global LTR styles and design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Arabic theme with warm, elegant colors */
-    --background: 45 23% 97%;
-    --foreground: 240 10% 15%;
+    /* Modern theme with clean colors */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 15%;
+    --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 15%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 158 64% 52%;
-    --primary-foreground: 0 0% 98%;
+    /* Professional color palette */
+    --primary: 221.2 83.2% 53.3%; /* Modern Blue */
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 45 23% 93%;
-    --secondary-foreground: 240 10% 15%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 45 23% 95%;
-    --muted-foreground: 240 5% 45%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 42 87% 55%;
-    --accent-foreground: 0 0% 15%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 45 23% 90%;
-    --input: 45 23% 95%;
-    --ring: 158 64% 52%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     /* Calendar specific colors */
-    --calendar-today: 158 64% 52%;
-    --calendar-today-foreground: 0 0% 98%;
-    --calendar-weekend: 0 84% 60%;
-    --calendar-weekend-foreground: 0 0% 98%;
-    --calendar-hover: 45 23% 93%;
+    --calendar-today: 221.2 83.2% 53.3%;
+    --calendar-today-foreground: 210 40% 98%;
+    --calendar-weekend: 0 84.2% 60.2%;
+    --calendar-weekend-foreground: 210 40% 98%;
+    --calendar-hover: 210 40% 96.1%;
     
-    /* Islamic color palette */
-    --islamic-green: 158 64% 52%;
-    --islamic-gold: 42 87% 55%;
-    --islamic-blue: 210 100% 56%;
+    /* Refined Islamic color palette */
+    --islamic-green: 170 45% 45%; /* Muted Teal */
+    --islamic-gold: 40 80% 60%; /* Soft Gold */
+    --islamic-blue: 205 55% 50%; /* Deep Sky Blue */
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--islamic-green)), hsl(var(--islamic-blue)));
@@ -111,8 +114,10 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-tajawal;
-    direction: rtl;
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    direction: ltr;
+    text-align: left;
   }
 
   /* Arabic typography */
@@ -120,14 +125,9 @@ All colors MUST be HSL.
     font-family: 'Tajawal', 'Cairo', sans-serif;
   }
 
-  .font-tajawal {
-    font-family: 'Tajawal', sans-serif;
-  }
-
   .font-cairo {
     font-family: 'Cairo', sans-serif;
   }
-
   /* RTL utilities */
   .rtl {
     direction: rtl;

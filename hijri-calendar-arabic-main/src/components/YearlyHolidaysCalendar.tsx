@@ -13,8 +13,8 @@ const YearlyHolidaysCalendar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const hijriMonths = [
-    "محرم", "صفر", "ربيع الأول", "ربيع الآخر", "جمادى الأولى", "جمادى الآخرة",
-    "رجب", "شعبان", "رمضان", "شوال", "ذو القعدة", "ذو الحجة"
+    "Muharram", "Safar", "Rabi' al-Awwal", "Rabi' al-Thani", "Jumada al-Awwal", "Jumada al-Thani",
+    "Rajab", "Sha'ban", "Ramadan", "Shawwal", "Dhu al-Qi'dah", "Dhu al-Hijjah"
   ];
 
   const handleHolidayClick = (holiday: IslamicHoliday) => {
@@ -48,11 +48,11 @@ const YearlyHolidaysCalendar = () => {
   const getCategoryLabel = (category: string) => {
     switch (category) {
       case 'major':
-        return 'مناسبة كبرى';
+        return 'Major Occasion';
       case 'special':
-        return 'مناسبة خاصة';
+        return 'Special Occasion';
       default:
-        return 'مناسبة';
+        return 'Occasion';
     }
   };
 
@@ -61,7 +61,7 @@ const YearlyHolidaysCalendar = () => {
       const hijriDate = moment().iYear(hijriYear).iMonth(hijriMonth - 1).iDate(hijriDay);
       return hijriDate.format('DD/MM/YYYY');
     } catch (error) {
-      return 'تاريخ تقريبي';
+      return 'Approximate Date';
     }
   };
 
@@ -90,14 +90,14 @@ const YearlyHolidaysCalendar = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-arabic bg-gradient-to-r from-islamic-green via-islamic-blue to-islamic-gold bg-clip-text text-transparent">
-              المناسبات الإسلامية
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-islamic-green via-islamic-blue to-islamic-gold bg-clip-text text-transparent">
+              Islamic Occasions
             </h2>
             <p className="text-lg text-muted-foreground mb-2">
-              جميع المناسبات الإسلامية المهمة للعام الهجري {currentHijriYear} هـ
+              All important Islamic occasions for the Hijri year {currentHijriYear} AH
             </p>
             <Badge variant="outline" className="text-sm">
-              التواريخ الميلادية تقريبية وقد تختلف حسب رؤية الهلال
+              Gregorian dates are approximate and may vary based on moon sighting
             </Badge>
           </div>
 
@@ -142,7 +142,7 @@ const YearlyHolidaysCalendar = () => {
                     
                     {/* Holiday Name */}
                     <div>
-                      <h3 className="text-xl font-bold font-arabic text-foreground leading-tight mb-2 group-hover:text-islamic-gold transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-foreground leading-tight mb-2 group-hover:text-islamic-gold transition-colors duration-300">
                         {holiday.name}
                       </h3>
                       
@@ -151,12 +151,12 @@ const YearlyHolidaysCalendar = () => {
                         <div className="flex items-center gap-2">
                           <div className="flex items-center gap-2 px-3 py-1 rounded-lg bg-islamic-green/10 border border-islamic-green/20">
                             <span className="text-sm font-bold text-islamic-green">
-                              {holiday.day} {hijriMonths[holiday.month - 1]} {currentHijriYear} هـ
+                              {hijriMonths[holiday.month - 1]} {holiday.day}, {currentHijriYear} AH
                             </span>
                           </div>
                         </div>
                         <div className="text-xs text-muted-foreground bg-muted/30 px-2 py-1 rounded-md inline-block">
-                          التاريخ الميلادي: {gregorianDate}
+                          Gregorian: {gregorianDate}
                         </div>
                       </div>
                     </div>
@@ -171,7 +171,7 @@ const YearlyHolidaysCalendar = () => {
                       <div className="border-t border-border/30 pt-3">
                         <div className="flex items-center gap-2 mb-2">
                           <div className="w-1.5 h-1.5 rounded-full bg-islamic-blue"></div>
-                          <h4 className="text-xs font-semibold text-islamic-blue font-arabic">الأهمية الدينية</h4>
+                          <h4 className="text-xs font-semibold text-islamic-blue">Religious Significance</h4>
                         </div>
                         <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 group-hover:text-foreground/70 transition-colors duration-300">
                           {holiday.detailedInfo.religiousImportance}

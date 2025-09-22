@@ -19,276 +19,276 @@ export interface IslamicHoliday {
 export const islamicHolidaysData: IslamicHoliday[] = [
   {
     id: "new-year",
-    name: "رأس السنة الهجرية",
+    name: "Islamic New Year",
     month: 1,
     day: 1,
-    description: "بداية العام الهجري الجديد",
+    description: "Beginning of the new Hijri year",
     category: "major",
     icon: "Calendar",
     detailedInfo: {
-      origin: "يصادف هذا اليوم هجرة الرسول محمد صلى الله عليه وسلم من مكة إلى المدينة المنورة في عام 622 ميلادية، والتي تُعرف بالهجرة النبوية الشريفة.",
-      historicalSignificance: "تُعتبر الهجرة نقطة تحول حاسمة في التاريخ الإسلامي، حيث أسس الرسول الكريم أول دولة إسلامية في المدينة المنورة. هذا الحدث لم يكن مجرد انتقال جغرافي، بل كان بداية عهد جديد للمسلمين.",
-      religiousImportance: "الهجرة درس في التوكل على الله والصبر على الابتلاء. كما أنها تذكرنا بأهمية الأخوة في الإسلام، حيث استقبل الأنصار المهاجرين بكل محبة وكرم.",
-      whyCelebrated: "نحتفل بهذا اليوم لنتذكر أهمية الهجرة في بناء الحضارة الإسلامية، ولنستلهم من قصة الهجرة دروس الصبر والثقة بالله والأخوة الإسلامية.",
+      origin: "This day marks the migration (Hijrah) of the Prophet Muhammad (PBUH) from Makkah to Madinah in 622 CE, known as the Hijrah of the Prophet.",
+      historicalSignificance: "The Hijrah was a pivotal turning point in Islamic history, as the Prophet established the first Islamic state in Madinah. This event was not just a geographical move but the beginning of a new era for Muslims.",
+      religiousImportance: "The Hijrah teaches us about reliance on God and patience in times of trial. It also reminds us of the importance of brotherhood in Islam, as the Ansar (Helpers) welcomed the Muhajireen (Emigrants) with love and generosity.",
+      whyCelebrated: "We commemorate this day to remember the importance of Hijrah in building Islamic civilization and to draw lessons of patience, trust in God, and Islamic brotherhood.",
       traditions: [
-        "قراءة سورة التوبة التي تحكي قصة الهجرة",
-        "الدعاء والذكر والاستغفار",
-        "تذكر دروس الهجرة والتأمل فيها",
-        "صلة الرحم والإحسان إلى الآخرين"
+        "Reciting Surah At-Tawbah which tells the story of Hijrah",
+        "Making supplications and remembrance of Allah",
+        "Reflecting on the lessons of Hijrah",
+        "Strengthening family ties and doing good to others"
       ],
       islamicReferences: [
-        "قوله تعالى: 'إِلَّا تَنصُرُوهُ فَقَدْ نَصَرَهُ اللَّهُ إِذْ أَخْرَجَهُ الَّذِينَ كَفَرُوا ثَانِيَ اثْنَيْنِ إِذْ هُمَا فِي الْغَارِ' - سورة التوبة",
-        "حديث: 'إنما الأعمال بالنيات' - متفق عليه"
+        "Allah says: 'If you do not aid the Prophet - Allah has already aided him when those who disbelieved had driven him out [of Makkah] as one of two, when they were in the cave...' - Surah At-Tawbah",
+        "Hadith: 'Deeds are but by intentions...' - Bukhari & Muslim"
       ]
     }
   },
   {
     id: "ashura",
-    name: "عاشوراء",
+    name: "Day of Ashura",
     month: 1,
     day: 10,
-    description: "يوم صيام مستحب وذكرى نجاة موسى عليه السلام",
+    description: "A recommended day of fasting and commemoration of Prophet Moses' salvation",
     category: "major",
     icon: "Star",
     detailedInfo: {
-      origin: "يوم عاشوراء هو اليوم العاشر من شهر محرم، وقد كان يُصام حتى قبل الإسلام. كان الرسول صلى الله عليه وسلم يصومه في مكة، ولما قدم المدينة وجد اليهود يصومونه.",
-      historicalSignificance: "في هذا اليوم نجى الله موسى عليه السلام وقومه من فرعون وجنوده، حيث انشق البحر لموسى وغرق فرعون ومن معه. كما أن في هذا اليوم وقعت أحداث تاريخية مهمة أخرى.",
-      religiousImportance: "صيام يوم عاشوراء يُكفر ذنوب سنة ماضية كما ورد في الأحاديث النبوية الشريفة. وهو من الأيام المباركة التي يُستحب فيها الصيام والعبادة.",
-      whyCelebrated: "نحتفل بهذا اليوم شكراً لله على نعمة النجاة، وتذكراً لقدرة الله العظيمة في نصرة أوليائه، واقتداءً بسنة الرسول الكريم في صيامه.",
+      origin: "The Day of Ashura is the 10th of Muharram. It was observed as a day of fasting even before Islam. The Prophet (PBUH) used to fast on this day in Makkah, and when he migrated to Madinah, he found the Jews fasting on this day.",
+      historicalSignificance: "On this day, Allah saved Prophet Moses and his people from Pharaoh and his army by parting the sea for them. Many other significant historical events also occurred on this day.",
+      religiousImportance: "Fasting on the Day of Ashura expiates the sins of the past year, as mentioned in authentic hadiths. It is one of the blessed days when worship is highly recommended.",
+      whyCelebrated: "We commemorate this day to thank Allah for His blessings, remember His great power in supporting His allies, and follow the Sunnah of the Prophet in fasting on this day.",
       traditions: [
-        "صيام يوم عاشوراء ويوم قبله أو بعده",
-        "الإكثار من الذكر والدعاء",
-        "قراءة القرآن والتأمل في قصة موسى عليه السلام",
-        "الصدقة والإحسان إلى الفقراء"
+        "Fasting on the 10th of Muharram and the day before or after it",
+        "Increasing in remembrance and supplications",
+        "Reading the Quran and reflecting on the story of Prophet Moses",
+        "Giving charity and being kind to the poor"
       ],
       islamicReferences: [
-        "حديث: 'صيام يوم عاشوراء أحتسب على الله أن يكفر السنة التي قبله' - رواه مسلم",
-        "قوله تعالى: 'فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ' - سورة الشعراء"
+        "Hadith: 'Fasting the day of Ashura, I hope, will expiate the sins of the previous year' - Muslim",
+        "Allah says: 'And We inspired Moses, 'Strike with your staff the sea,' and it parted...' - Surah Ash-Shu'ara"
       ]
     }
   },
   {
     id: "mawlid",
-    name: "المولد النبوي الشريف",
+    name: "Mawlid al-Nabi",
     month: 3,
     day: 12,
-    description: "ذكرى مولد الرسول محمد صلى الله عليه وسلم",
+    description: "Birth of the Prophet Muhammad (PBUH)",
     category: "major",
     icon: "Heart",
     detailedInfo: {
-      origin: "وُلد الرسول محمد صلى الله عليه وسلم في مكة المكرمة في الثاني عشر من ربيع الأول، في عام الفيل، الموافق 571 ميلادية تقريباً.",
-      historicalSignificance: "مولد النبي محمد صلى الله عليه وسلم كان نوراً أضاء العالم، حيث جاء ليُخرج الناس من الظلمات إلى النور، ومن عبادة العباد إلى عبادة رب العباد.",
-      religiousImportance: "هذا اليوم يذكرنا برحمة الله للعالمين، فقد أرسل إلينا خير البشر وخاتم المرسلين. إنه يوم نتذكر فيه أخلاق النبي الكريم وسيرته العطرة.",
-      whyCelebrated: "نحتفل بهذا اليوم حباً للرسول الكريم وتذكراً لسيرته العطرة، وتجديداً للعهد معه بإتباع سنته والسير على نهجه المبارك.",
+      origin: "The Prophet Muhammad (PBUH) was born in Makkah on the 12th of Rabi' al-Awwal, in the Year of the Elephant, approximately 571 CE.",
+      historicalSignificance: "The birth of the Prophet (PBUH) was a light that illuminated the world, as he came to bring people out of darkness into light, from worshiping creation to worshiping the Creator.",
+      religiousImportance: "This day reminds us of Allah's mercy to the worlds, as He sent us the best of creation and the seal of the prophets. It's a day to remember the noble character and biography of the Prophet (PBUH).",
+      whyCelebrated: "We celebrate this day out of love for the Prophet (PBUH), to remember his noble biography, and to renew our pledge to follow his Sunnah and follow his blessed path.",
       traditions: [
-        "قراءة السيرة النبوية الشريفة",
-        "الإكثار من الصلاة على النبي صلى الله عليه وسلم",
-        "دراسة أخلاق وآداب النبي الكريم",
-        "إقامة المجالس الدينية والدروس النبوية"
+        "Reading the Prophet's biography",
+        "Increasing prayers upon the Prophet (PBUH)",
+        "Studying the Prophet's character and manners",
+        "Holding religious gatherings and lessons about the Prophet"
       ],
       islamicReferences: [
-        "قوله تعالى: 'وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِّلْعَالَمِينَ' - سورة الأنبياء",
-        "قوله تعالى: 'لَقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ' - سورة الأحزاب"
+        "Allah says: 'And We have not sent you, [O Muhammad], except as a mercy to the worlds' - Surah Al-Anbiya",
+        "Allah says: 'There has certainly been for you in the Messenger of Allah an excellent pattern...' - Surah Al-Ahzab"
       ]
     }
   },
   {
     id: "isra-miraj",
-    name: "ليلة الإسراء والمعراج",
+    name: "Night Journey & Ascension",
     month: 7,
     day: 27,
-    description: "ذكرى رحلة الرسول الكريم من المسجد الحرام إلى المسجد الأقصى",
+    description: "The Prophet's miraculous night journey from Makkah to Jerusalem",
     category: "special",
     icon: "Star",
     detailedInfo: {
-      origin: "في هذه الليلة المباركة، أُسري بالرسول محمد صلى الله عليه وسلم من المسجد الحرام إلى المسجد الأقصى، ثم عُرج به إلى السماوات العُلا.",
-      historicalSignificance: "هذه المعجزة العظيمة حدثت في فترة صعبة من دعوة النبي، بعد وفاة عمه أبي طالب وزوجته خديجة رضي الله عنها، فكانت تسلية وتكريماً من الله لنبيه الكريم.",
-      religiousImportance: "في هذه الرحلة فُرضت الصلوات الخمس، والتقى النبي بالأنبياء السابقين وصلى بهم إماماً. كما رأى من آيات ربه الكبرى وجنات النعيم وعذاب جهنم.",
-      whyCelebrated: "نحتفل بهذه الليلة لنتذكر عظمة هذه المعجزة ومكانة نبينا الكريم عند الله، ولنجدد إيماننا ويقيننا بقدرة الله العظيمة.",
+      origin: "On this blessed night, the Prophet Muhammad (PBUH) was taken on a night journey from the Sacred Mosque in Makkah to Al-Aqsa Mosque in Jerusalem, and then ascended through the heavens.",
+      historicalSignificance: "This great miracle occurred during a difficult period of the Prophet's mission, after the death of his uncle Abu Talib and his wife Khadijah (may Allah be pleased with her), serving as comfort and honor from Allah to His Prophet.",
+      religiousImportance: "During this journey, the five daily prayers were ordained, and the Prophet met the previous prophets and led them in prayer. He also witnessed great signs of his Lord, the gardens of Paradise, and the punishment of Hellfire.",
+      whyCelebrated: "We commemorate this night to remember the greatness of this miracle and the high status of our Prophet before Allah, and to renew our faith and certainty in Allah's great power.",
       traditions: [
-        "الإكثار من الصلاة والذكر في هذه الليلة",
-        "قراءة سورة الإسراء والتأمل فيها",
-        "الدعاء والاستغفار والتوبة النصوح",
-        "تذكر مكانة المسجد الأقصى المبارك"
+        "Increasing in prayers and remembrance of Allah during this night",
+        "Reading and reflecting on Surah Al-Isra",
+        "Making supplications, seeking forgiveness, and sincere repentance",
+        "Remembering the status of the blessed Al-Aqsa Mosque"
       ],
       islamicReferences: [
-        "قوله تعالى: 'سُبْحَانَ الَّذِي أَسْرَىٰ بِعَبْدِهِ لَيْلًا مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى' - سورة الإسراء",
-        "حديث الإسراء والمعراج المفصل في صحيحي البخاري ومسلم"
+        "Allah says: 'Exalted is He who took His Servant by night from al-Masjid al-Haram to al-Masjid al-Aqsa...' - Surah Al-Isra",
+        "The detailed hadith of the Night Journey in Sahih Bukhari and Muslim"
       ]
     }
   },
   {
     id: "shaban-mid",
-    name: "ليلة النصف من شعبان",
+    name: "Mid-Sha'ban Night",
     month: 8,
     day: 15,
-    description: "ليلة مباركة يستحب فيها الصيام والقيام",
+    description: "A blessed night recommended for worship and forgiveness",
     category: "special",
     icon: "Moon",
     detailedInfo: {
-      origin: "ليلة النصف من شعبان هي الليلة الخامسة عشرة من شهر شعبان، وهي من الليالي المباركة في التقويم الإسلامي.",
-      historicalSignificance: "هذه الليلة لها مكانة خاصة في قلوب المسلمين عبر التاريخ، حيث كانوا يحيونها بالقيام والدعاء والاستغفار استعداداً لشهر رمضان المبارك.",
-      religiousImportance: "في هذه الليلة ينزل الله إلى السماء الدنيا ويغفر لمن يستغفره ويتوب إليه. وهي ليلة توبة ومغفرة ورحمة من الله العزيز الغفار.",
-      whyCelebrated: "نحتفل بهذه الليلة طلباً للمغفرة والرحمة من الله، واستعداداً روحياً لاستقبال شهر رمضان المبارك بقلوب طاهرة ونفوس تائبة.",
+      origin: "The Night of Mid-Sha'ban is the 15th night of Sha'ban, one of the blessed nights in the Islamic calendar.",
+      historicalSignificance: "This night holds a special place in the hearts of Muslims throughout history, as they would spend it in worship, supplication, and seeking forgiveness in preparation for Ramadan.",
+      religiousImportance: "On this night, Allah descends to the lowest heaven and forgives those who seek His forgiveness. It is a night of repentance, forgiveness, and mercy from Allah.",
+      whyCelebrated: "We commemorate this night seeking Allah's forgiveness and mercy, and as spiritual preparation to welcome the blessed month of Ramadan with pure hearts and repentant souls.",
       traditions: [
-        "إحياء هذه الليلة بالصلاة والذكر",
-        "الإكثار من الاستغفار والتوبة",
-        "قراءة القرآن والتأمل في آياته",
-        "الدعاء للوالدين والأحباب الأموات"
+        "Spending the night in prayer and remembrance",
+        "Increasing in seeking forgiveness and repentance",
+        "Reading the Quran and reflecting on its verses",
+        "Making supplications for parents and deceased loved ones"
       ],
       islamicReferences: [
-        "حديث: 'ينزل ربنا إلى السماء الدنيا ليلة النصف من شعبان فيغفر لجميع خلقه إلا لمشرك أو مشاحن' - رواه ابن ماجه",
-        "قوله تعالى: 'إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ وَيُحِبُّ الْمُتَطَهِّرِينَ' - سورة البقرة"
+        "Hadith: 'Allah looks at His creation on the night of mid-Sha'ban and forgives all of them except the one who associates partners with Him or the one who harbors hatred' - Ibn Majah",
+        "Allah says: 'Indeed, Allah loves those who are constantly repentant and loves those who purify themselves' - Surah Al-Baqarah"
       ]
     }
   },
   {
     id: "ramadan-start",
-    name: "بداية شهر رمضان المبارك",
+    name: "Beginning of Ramadan",
     month: 9,
     day: 1,
-    description: "شهر الصيام والقرآن والعبادة",
+    description: "Month of Fasting, Quran, and Worship",
     category: "major",
     icon: "Moon",
     detailedInfo: {
-      origin: "شهر رمضان المبارك هو الشهر التاسع من التقويم الهجري، وهو الشهر الذي فُرض فيه الصيام على المسلمين في السنة الثانية من الهجرة.",
-      historicalSignificance: "في هذا الشهر الكريم نزل القرآن الكريم، وفيه وقعت غزوة بدر الكبرى وفتح مكة المكرمة، وأحداث تاريخية مهمة أخرى في تاريخ الإسلام.",
-      religiousImportance: "الصيام في رمضان ركن من أركان الإسلام الخمسة. وهو شهر تتضاعف فيه الأجور والحسنات، وتُفتح فيه أبواب الجنة وتُغلق أبواب النار.",
-      whyCelebrated: "نستقبل رمضان بالفرح والبهجة لأنه شهر المغفرة والرحمة والعتق من النار. إنه فرصة للتوبة والتطهر والتقرب إلى الله عز وجل.",
+      origin: "The blessed month of Ramadan is the ninth month of the Islamic calendar, in which fasting was made obligatory for Muslims in the second year after Hijrah.",
+      historicalSignificance: "In this blessed month, the Quran was revealed, and significant events like the Battle of Badr and the Conquest of Makkah took place in Islamic history.",
+      religiousImportance: "Fasting in Ramadan is one of the five pillars of Islam. It is a month when rewards are multiplied, the gates of Paradise are opened, and the gates of Hellfire are closed.",
+      whyCelebrated: "We welcome Ramadan with joy and happiness because it is a month of forgiveness, mercy, and salvation from the Hellfire. It is an opportunity for repentance, purification, and drawing closer to Allah.",
       traditions: [
-        "الصيام من الفجر إلى المغرب",
-        "قيام الليل وصلاة التراويح",
-        "الإكثار من قراءة القرآن الكريم",
-        "الزكاة والصدقة والإحسان إلى الفقراء"
+        "Fasting from dawn to sunset",
+        "Night prayers (Taraweeh)",
+        "Increased recitation of the Quran",
+        "Giving charity and being kind to the poor"
       ],
       islamicReferences: [
-        "قوله تعالى: 'يَا أَيُّهَا الَّذِينَ آمَنُوا كُتِبَ عَلَيْكُمُ الصِّيَامُ كَمَا كُتِبَ عَلَى الَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ' - سورة البقرة",
-        "حديث: 'من صام رمضان إيماناً واحتساباً غُفر له ما تقدم من ذنبه' - متفق عليه"
+        "Allah says: 'O you who have believed, decreed upon you is fasting as it was decreed upon those before you that you may become righteous' - Surah Al-Baqarah",
+        "Hadith: 'Whoever fasts Ramadan out of faith and seeking reward, his previous sins will be forgiven' - Bukhari & Muslim"
       ]
     }
   },
   {
     id: "laylat-qadr",
-    name: "ليلة القدر (تقريبية)",
+    name: "Night of Decree (estimated)",
     month: 9,
     day: 27,
-    description: "خير من ألف شهر - الليالي الوترية من العشر الأواخر",
+    description: "Better than a thousand months - The odd nights of the last ten days",
     category: "special",
     icon: "Star",
     detailedInfo: {
-      origin: "ليلة القدر هي الليلة التي نزل فيها القرآن الكريم، وهي في العشر الأواخر من رمضان، خاصة في الليالي الوترية.",
-      historicalSignificance: "في هذه الليلة المباركة بدأ نزول القرآن الكريم على سيدنا محمد صلى الله عليه وسلم في غار حراء، فكانت بداية الرسالة الخاتمة للبشرية.",
-      religiousImportance: "ليلة القدر خير من ألف شهر، أي أن العبادة فيها تساوي عبادة أكثر من 83 سنة. تنزل فيها الملائكة والروح بإذن ربهم من كل أمر.",
-      whyCelebrated: "نحيي هذه الليلة بالعبادة والدعاء والذكر طلباً للأجر العظيم والمغفرة، واقتداءً بسنة النبي الكريم الذي كان يعتكف في العشر الأواخر من رمضان.",
+      origin: "The Night of Decree is the night when the Quran was first revealed, occurring in the last ten nights of Ramadan, particularly on the odd-numbered nights.",
+      historicalSignificance: "On this blessed night, the revelation of the Quran began to Prophet Muhammad (PBUH) in the Cave of Hira, marking the beginning of the final message to humanity.",
+      religiousImportance: "The Night of Decree is better than a thousand months, meaning worship in it is equivalent to worshiping for more than 83 years. The angels and the Spirit descend by permission of their Lord for every matter.",
+      whyCelebrated: "We observe this night in worship, supplication, and remembrance, seeking the great reward and forgiveness, following the Sunnah of the Prophet who used to seclude himself in the mosque during the last ten nights of Ramadan.",
       traditions: [
-        "الاعتكاف في العشر الأواخر من رمضان",
-        "إحياء الليل بالصلاة والذكر والدعاء",
-        "قراءة القرآن الكريم والتأمل فيه",
-        "الإكثار من دعاء: 'اللهم إنك عفو تحب العفو فاعف عني'"
+        "I'tikaf (seclusion in the mosque) during the last ten nights",
+        "Spending the night in prayer, remembrance, and supplication",
+        "Reciting and reflecting on the Quran",
+        "Frequently reciting the supplication: 'O Allah, You are Forgiving and love forgiveness, so forgive me'"
       ],
       islamicReferences: [
-        "قوله تعالى: 'إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ * وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ * لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ' - سورة القدر",
-        "حديث: 'من قام ليلة القدر إيماناً واحتساباً غُفر له ما تقدم من ذنبه' - متفق عليه"
+        "Allah says: 'Indeed, We sent the Quran down during the Night of Decree. And what can make you know what is the Night of Decree? The Night of Decree is better than a thousand months' - Surah Al-Qadr",
+        "Hadith: 'Whoever stands (in prayer) during the Night of Decree out of faith and seeking reward, his previous sins will be forgiven' - Bukhari & Muslim"
       ]
     }
   },
   {
     id: "eid-fitr",
-    name: "عيد الفطر المبارك",
+    name: "Eid al-Fitr",
     month: 10,
     day: 1,
-    description: "عيد إنتهاء شهر رمضان المبارك",
+    description: "Festival of Breaking the Fast",
     category: "major",
     icon: "Heart",
     detailedInfo: {
-      origin: "عيد الفطر هو أول يوم من شهر شوال، ويأتي بعد انتهاء شهر رمضان المبارك. شُرع هذا العيد في السنة الثانية من الهجرة.",
-      historicalSignificance: "هذا العيد يمثل انتهاء شهر الصيام وبداية أيام الفرح والسرور. كان النبي صلى الله عليه وسلم يحتفل بهذا اليوم ويدعو المسلمين للفرح والابتهاج.",
-      religiousImportance: "في هذا اليوم تُخرج زكاة الفطر، وتُصلى صلاة العيد، ويُستحب التكبير والتهليل. إنه يوم شكر لله على تمام الصيام وقبول الأعمال الصالحة.",
-      whyCelebrated: "نحتفل بعيد الفطر فرحاً بتمام نعمة الله علينا، وشكراً له على توفيقنا لصيام رمضان، وابتهاجاً بقدوم أيام الفرح والسرور.",
+      origin: "Eid al-Fitr is the first day of Shawwal, coming after the end of Ramadan. This Eid was prescribed in the second year after Hijrah.",
+      historicalSignificance: "This Eid marks the end of the month of fasting and the beginning of days of joy and happiness. The Prophet (PBUH) used to celebrate this day and encouraged Muslims to be happy and joyful.",
+      religiousImportance: "On this day, Zakat al-Fitr is given, the Eid prayer is performed, and it is recommended to say the Takbeer and Tahleel. It is a day of thanking Allah for completing the fast and accepting good deeds.",
+      whyCelebrated: "We celebrate Eid al-Fitr, rejoicing in the completion of Allah's favor upon us, thanking Him for enabling us to fast Ramadan, and being happy with the coming days of joy and happiness.",
       traditions: [
-        "أداء صلاة العيد في المسجد أو المصلى",
-        "إخراج زكاة الفطر قبل صلاة العيد",
-        "التكبير والتهليل والتحميد",
-        "صلة الأرحام وتبادل التهاني والهدايا"
+        "Performing the Eid prayer in the mosque or prayer ground",
+        "Giving Zakat al-Fitr before the Eid prayer",
+        "Saying the Takbeer, Tahleel, and Tahmeed",
+        "Maintaining family ties and exchanging greetings and gifts"
       ],
       islamicReferences: [
-        "قوله تعالى: 'وَلِتُكْمِلُوا الْعِدَّةَ وَلِتُكَبِّرُوا اللَّهَ عَلَىٰ مَا هَدَاكُمْ وَلَعَلَّكُمْ تَشْكُرُونَ' - سورة البقرة",
-        "حديث: 'إن لكل قوم عيداً وهذا عيدنا' - متفق عليه"
+        "Allah says: 'And [wants for you] to complete the period and to glorify Allah for that [to] which He has guided you; and perhaps you will be grateful' - Surah Al-Baqarah",
+        "Hadith: 'Every people have their festival, and this is our festival' - Bukhari & Muslim"
       ]
     }
   },
   {
     id: "arafat-day",
-    name: "وقفة عرفة",
+    name: "Day of Arafah",
     month: 12,
     day: 9,
-    description: "يوم الحج الأكبر ويوم صيام لغير الحجاج",
+    description: "The day of Hajj and recommended fasting for non-pilgrims",
     category: "major",
     icon: "Star",
     detailedInfo: {
-      origin: "يوم عرفة هو التاسع من ذي الحجة، وهو يوم الوقوف بعرفة للحجاج، وهو الركن الأعظم من أركان الحج.",
-      historicalSignificance: "في جبل عرفة ألقى النبي صلى الله عليه وسلم خطبة الوداع في حجة الوداع، وفيه نزلت آية إتمام الدين وإكمال النعمة.",
-      religiousImportance: "هذا اليوم هو يوم إتمام الدين، ويوم أكمل الله فيه نعمته على المسلمين. صيام هذا اليوم لغير الحاج يُكفر ذنوب سنتين: سنة ماضية وسنة قادمة.",
-      whyCelebrated: "نحتفل بهذا اليوم لأنه يوم إتمام الدين، ونصوم فيه طلباً للأجر العظيم والمغفرة، ونكثر من الدعاء والذكر والاستغفار.",
+      origin: "The Day of Arafah is the 9th of Dhu al-Hijjah, the day when pilgrims stand at Mount Arafah, which is the greatest pillar of Hajj.",
+      historicalSignificance: "At Mount Arafah, the Prophet (PBUH) delivered his Farewell Sermon during his Farewell Pilgrimage, and the verse of the perfection of religion and completion of divine favor was revealed.",
+      religiousImportance: "This is the day when Allah perfected the religion and completed His favor upon the Muslims. Fasting on this day expiates the sins of two years: the past one and the coming one.",
+      whyCelebrated: "We commemorate this day because it is the day of the perfection of religion. We fast on it seeking great reward and forgiveness, and we increase in supplication, remembrance, and seeking forgiveness.",
       traditions: [
-        "صيام يوم عرفة لغير الحجاج",
-        "الإكثار من الدعاء والذكر والتكبير",
-        "قراءة القرآن والتأمل في آياته",
-        "الصدقة والإحسان إلى الفقراء والمحتاجين"
+        "Fasting for those not performing Hajj",
+        "Increasing in supplications and remembrance of Allah",
+        "Reciting the Quran and reflecting on its verses",
+        "Giving charity and being kind to the poor and needy"
       ],
       islamicReferences: [
-        "قوله تعالى: 'الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِي وَرَضِيتُ لَكُمُ الْإِسْلَامَ دِينًا' - سورة المائدة",
-        "حديث: 'صيام يوم عرفة أحتسب على الله أن يكفر السنة التي قبله والسنة التي بعده' - رواه مسلم"
+        "Allah says: 'This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as religion' - Surah Al-Ma'idah",
+        "Hadith: 'Fasting on the Day of Arafah, I hope from Allah, expiates for the sins of the year before and the year after' - Muslim"
       ]
     }
   },
   {
     id: "eid-adha",
-    name: "عيد الأضحى المبارك",
+    name: "Eid al-Adha",
     month: 12,
     day: 10,
-    description: "عيد الحج والتضحية",
+    description: "Festival of Sacrifice",
     category: "major",
     icon: "Heart",
     detailedInfo: {
-      origin: "عيد الأضحى هو العاشر من ذي الحجة، ويأتي بعد يوم عرفة. يُسمى أيضاً بالعيد الكبير، وهو أحد أهم الأعياد الإسلامية.",
-      historicalSignificance: "هذا العيد يحيي ذكرى تضحية النبي إبراهيم عليه السلام، عندما كان مستعداً لتقديم ابنه إسماعيل قرباناً لله، فافتداه الله بذبح عظيم.",
-      religiousImportance: "في هذا اليوم يُضحي المسلمون بالأنعام تقرباً إلى الله واقتداءً بسنة إبراهيم عليه السلام. كما تُصلى صلاة العيد ويُكبر المسلمون الله.",
-      whyCelebrated: "نحتفل بعيد الأضحى تذكراً لتضحية إبراهيم عليه السلام وطاعته لله، ونقدم الأضاحي تقرباً إلى الله وشكراً له على نعمه.",
+      origin: "Eid al-Adha is the 10th of Dhu al-Hijjah, coming after the Day of Arafah. It is also called the Greater Eid and is one of the most important Islamic festivals.",
+      historicalSignificance: "This Eid revives the memory of the sacrifice of Prophet Ibrahim (AS), when he was ready to sacrifice his son Ismail as an offering to Allah, but Allah ransomed him with a great sacrifice.",
+      religiousImportance: "On this day, Muslims offer animal sacrifices as an act of worship to Allah, following the Sunnah of Ibrahim (AS). The Eid prayer is performed, and Muslims glorify Allah.",
+      whyCelebrated: "We celebrate Eid al-Adha in remembrance of the sacrifice of Ibrahim (AS) and his obedience to Allah, and we offer sacrifices to draw nearer to Allah and thank Him for His blessings.",
       traditions: [
-        "أداء صلاة العيد في المسجد أو المصلى",
-        "ذبح الأضحية للقادرين عليها",
-        "التكبير من فجر يوم عرفة إلى عصر آخر أيام التشريق",
-        "توزيع لحم الأضحية على الفقراء والأقارب"
+        "Performing the Eid prayer in the mosque or prayer ground",
+        "Offering the sacrifice for those who can afford it",
+        "Saying the Takbeer from the dawn of Arafah until the afternoon of the last day of Tashreeq",
+        "Distributing the sacrificial meat to the poor and relatives"
       ],
       islamicReferences: [
-        "قوله تعالى: 'فَلَمَّا أَسْلَمَا وَتَلَّهُ لِلْجَبِينِ * وَنَادَيْنَاهُ أَن يَا إِبْرَاهِيمُ * قَدْ صَدَّقْتَ الرُّؤْيَا' - سورة الصافات",
-        "قوله تعالى: 'فَصَلِّ لِرَبِّكَ وَانْحَرْ' - سورة الكوثر"
+        "Allah says: 'And when they had both submitted and he put him down upon his forehead, We called to him, 'O Abraham, You have fulfilled the vision...' - Surah As-Saffat",
+        "Allah says: 'So pray to your Lord and sacrifice [to Him alone]' - Surah Al-Kawthar"
       ]
     }
   },
   {
     id: "tashriq-days",
-    name: "أيام التشريق",
+    name: "Days of Tashreeq",
     month: 12,
     day: 11,
-    description: "أيام أكل وشرب وذكر لله (11-13 ذو الحجة)",
+    description: "Days of eating, drinking, and remembering Allah (11th-13th Dhu al-Hijjah)",
     category: "special",
     icon: "Calendar",
     detailedInfo: {
-      origin: "أيام التشريق هي الأيام الثلاثة التي تلي يوم عيد الأضحى (11، 12، 13 من ذي الحجة). سُميت بهذا الاسم لأن لحوم الأضاحي كانت تُشرّق فيها (تُقدد في الشمس).",
-      historicalSignificance: "هذه الأيام جزء من مناسك الحج، حيث يقوم الحجاج فيها برمي الجمرات وذكر الله كثيراً. وهي امتداد لفرحة عيد الأضحى.",
-      religiousImportance: "هذه أيام أكل وشرب وذكر لله كما وصفها النبي صلى الله عليه وسلم. يُستحب فيها التكبير والتحميد والتهليل، وهي من الأيام المعلومات المذكورة في القرآن.",
-      whyCelebrated: "نحتفل بأيام التشريق استكمالاً لفرحة العيد، وذكراً لله على نعمه، واقتداءً بسنة النبي الكريم في التكبير والذكر.",
+      origin: "The Days of Tashreeq are the three days following Eid al-Adha (11th, 12th, and 13th of Dhu al-Hijjah). They are called Tashreeq because the meat of sacrifices was dried in the sun during these days.",
+      historicalSignificance: "These days are part of the Hajj rituals, where pilgrims perform the stoning of the Jamarat and remember Allah abundantly. They are an extension of the joy of Eid al-Adha.",
+      religiousImportance: "These are days of eating, drinking, and remembering Allah as described by the Prophet (PBUH). It is recommended to say the Takbeer, Tahmeed, and Tahleel during these days, which are among the appointed days mentioned in the Quran.",
+      whyCelebrated: "We celebrate the Days of Tashreeq as a continuation of the Eid's joy, remembering Allah's blessings, and following the Sunnah of the Prophet in saying the Takbeer and remembrance.",
       traditions: [
-        "التكبير المقيد بعد كل صلاة فريضة",
-        "الإكثار من ذكر الله والتحميد والتهليل",
-        "الأكل من لحم الأضحية والتمتع بالطعام الحلال",
-        "صلة الأرحام والتزاور بين الأقارب والأصدقاء"
+        "Saying the restricted Takbeer after every obligatory prayer",
+        "Increasing in the remembrance of Allah, Tahmeed, and Tahleel",
+        "Eating from the sacrificial meat and enjoying halal food",
+        "Maintaining family ties and visiting relatives and friends"
       ],
       islamicReferences: [
-        "حديث: 'أيام التشريق أيام أكل وشرب وذكر لله' - رواه مسلم",
-        "قوله تعالى: 'وَاذْكُرُوا اللَّهَ فِي أَيَّامٍ مَّعْدُودَاتٍ' - سورة البقرة"
+        "Hadith: 'The days of Tashreeq are days of eating, drinking, and remembrance of Allah' - Muslim",
+        "Allah says: 'And remember Allah during [specific] numbered days' - Surah Al-Baqarah"
       ]
     }
   }

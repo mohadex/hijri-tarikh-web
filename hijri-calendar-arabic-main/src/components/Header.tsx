@@ -20,28 +20,30 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-8">
-            <h1 className="text-2xl font-bold font-arabic bg-gradient-to-r from-islamic-green to-islamic-blue bg-clip-text text-transparent">
-              التقويم الهجري
-            </h1>
+            <a href="/" className="no-underline">
+              <span className="text-2xl font-bold bg-gradient-to-r from-islamic-green to-islamic-blue bg-clip-text text-transparent">
+                Taqweem Hijri
+              </span>
+            </a>
             <nav className="hidden md:flex items-center gap-6">
               <a 
-                href="#" 
+                href="/" 
                 className="text-foreground/80 hover:text-primary transition-colors font-medium"
               >
-                الرئيسية
+                Home
               </a>
               <a 
-                href="#converter" 
+                href="/#converter" 
                 className="text-foreground/80 hover:text-primary transition-colors font-medium"
               >
-                تحويل التاريخ
+                Date Converter
               </a>
               <a 
-                href="#calendar" 
+                href="/#calendar" 
                 className="text-foreground/80 hover:text-primary transition-colors font-medium"
-                title="التقويم الهجري الشهري"
+                title="Hijri Monthly Calendar"
               >
-                التقويم الهجري
+                Calendar
               </a>
             </nav>
           </div>
@@ -58,7 +60,7 @@ const Header = () => {
               ) : (
                 <Moon className="h-4 w-4" />
               )}
-              <span className="sr-only">تبديل الوضع</span>
+              <span className="sr-only">Toggle theme</span>
             </Button>
             
             {/* Mobile menu button */}
@@ -83,26 +85,26 @@ const Header = () => {
             <nav className="container mx-auto px-4 py-4">
               <div className="flex flex-col space-y-4">
                 <a 
-                  href="#" 
+                  href="/" 
                   className="text-foreground/80 hover:text-primary transition-colors font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  الرئيسية
+                  Home
                 </a>
                 <a 
-                  href="#converter" 
+                  href="/#converter" 
                   className="text-foreground/80 hover:text-primary transition-colors font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  تحويل التاريخ
+                  Date Converter
                 </a>
                 <a 
-                  href="#calendar" 
+                  href="/#calendar" 
                   className="text-foreground/80 hover:text-primary transition-colors font-medium py-2"
-                  title="التقويم الهجري الشهري"
+                  title="Hijri Monthly Calendar"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  التقويم الهجري
+                  Calendar
                 </a>
               </div>
             </nav>

@@ -8,6 +8,9 @@ const TodayDate = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Set moment locale to English for month names
+    moment.locale('en');
+    
     // Use moment-hijri for accurate Hijri date
     const hijriMoment = moment();
     const hijriDay = hijriMoment.format('iD');
@@ -27,8 +30,8 @@ const TodayDate = () => {
   const getCurrentGregorianDate = () => {
     const today = new Date();
     const months = [
-      "يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو",
-      "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
     ];
     
     return {
@@ -44,11 +47,11 @@ const TodayDate = () => {
     <section className="py-8">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold mb-4 font-arabic bg-gradient-to-r from-islamic-green to-islamic-blue bg-clip-text text-transparent">
-            تاريخ اليوم هجري وميلادي
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-islamic-green to-islamic-blue bg-clip-text text-transparent">
+            Hijri Date Today
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            اعرف تاريخ اليوم هجري الآن مع التاريخ الميلادي المقابل له
+            View today's date in both Hijri and Gregorian calendars
           </p>
         </div>
         
@@ -57,21 +60,16 @@ const TodayDate = () => {
           <Card className="p-6 text-center bg-gradient-to-br from-islamic-green/10 to-islamic-blue/10 border-islamic-green/20 hover:shadow-lg transition-all duration-300">
             <div className="flex justify-center mb-4">
               <div className="p-3 bg-islamic-green/10 rounded-full">
-                <Calendar className="h-8 w-8 text-islamic-green" aria-label="أيقونة التقويم الهجري" />
+                <Calendar className="h-8 w-8 text-islamic-green" aria-label="Hijri Calendar Icon" />
               </div>
             </div>
-            <h3 className="text-lg font-semibold text-muted-foreground mb-2">تاريخ اليوم هجري</h3>
+            <h3 className="text-lg font-semibold text-muted-foreground mb-2">Hijri Date</h3>
             {loading ? (
-              <div className="text-muted-foreground">جاري التحميل...</div>
+              <div className="text-muted-foreground">Loading...</div>
             ) : hijriDate ? (
-              <>
-                <div id="hijri-date" className="text-3xl font-bold font-arabic text-islamic-green mb-2" itemProp="dateCreated" itemScope itemType="https://schema.org/Date">
-                  {hijriDate.day} {hijriDate.month} {hijriDate.year} هـ
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  {hijriDate.day}/{hijriDate.monthNumber}/{hijriDate.year}
-                </p>
-              </>
+              <div className="text-3xl font-bold text-islamic-green" itemProp="dateCreated" itemScope itemType="https://schema.org/Date">
+                {hijriDate.month} {hijriDate.day}, {hijriDate.year} AH
+              </div>
             ) : null}
           </Card>
 
@@ -79,16 +77,13 @@ const TodayDate = () => {
           <Card className="p-6 text-center bg-gradient-to-br from-islamic-gold/10 to-accent/10 border-islamic-gold/20 hover:shadow-lg transition-all duration-300">
             <div className="flex justify-center mb-4">
               <div className="p-3 bg-islamic-gold/10 rounded-full">
-                <Clock className="h-8 w-8 text-islamic-gold" aria-label="أيقونة التقويم الميلادي" />
+                <Clock className="h-8 w-8 text-islamic-gold" aria-label="Gregorian Calendar Icon" />
               </div>
             </div>
-            <h3 className="text-lg font-semibold text-muted-foreground mb-2">تاريخ اليوم ميلادي</h3>
-            <div className="text-3xl font-bold font-arabic text-islamic-gold mb-2" itemProp="dateCreated" itemScope itemType="https://schema.org/Date">
-              {gregorianDate.day} {gregorianDate.month} {gregorianDate.year} م
+            <h3 className="text-lg font-semibold text-muted-foreground mb-2">Gregorian Date</h3>
+            <div className="text-3xl font-bold text-islamic-gold" itemProp="dateCreated" itemScope itemType="https://schema.org/Date">
+              {gregorianDate.month} {gregorianDate.day}, {gregorianDate.year} AD
             </div>
-            <p className="text-sm text-muted-foreground">
-              {gregorianDate.day}/{gregorianDate.month}/{gregorianDate.year}
-            </p>
           </Card>
         </div>
       </div>
