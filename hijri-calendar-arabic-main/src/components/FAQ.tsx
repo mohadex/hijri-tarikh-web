@@ -49,15 +49,6 @@ const FAQ = () => {
   return (
     <section id="faq" className="py-16 bg-gradient-to-br from-blue-50 to-green-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Answers to common questions about the Hijri Calendar and date conversion
-          </p>
-        </div>
-
         <Card className="max-w-4xl mx-auto p-6">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (

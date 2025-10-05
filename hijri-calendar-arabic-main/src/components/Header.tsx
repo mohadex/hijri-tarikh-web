@@ -45,6 +45,12 @@ const Header = () => {
               >
                 Calendar
               </a>
+              <a 
+                href="/articles" 
+                className="text-foreground/80 hover:text-primary transition-colors font-medium"
+              >
+                Articles
+              </a>
             </nav>
           </div>
           
@@ -92,7 +98,7 @@ const Header = () => {
                   Home
                 </a>
                 <a 
-                  href="/#converter" 
+                  href="/#converter"
                   className="text-foreground/80 hover:text-primary transition-colors font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -105,6 +111,13 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Calendar
+                </a>
+                <a 
+                  href="/articles" 
+                  className="text-foreground/80 hover:text-primary transition-colors font-medium py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Articles
                 </a>
               </div>
             </nav>

@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Articles from "./pages/Articles";
+import ArticleDetail from "./pages/ArticleDetail";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -57,6 +59,8 @@ const App = () => {
                   <Route path="/privacy" element={<PrivacyPolicy />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="/articles" element={<Articles />} />
+                  <Route path="/articles/:id" element={<ArticleDetail />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>

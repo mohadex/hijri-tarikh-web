@@ -132,26 +132,6 @@ const PrivacyPolicy = () => {
                       info@taqweemhijri.site
                     </a>
                   </p>
-                  <div className="flex space-x-4 mt-4">
-                    <a 
-                      href="/" 
-                      className="text-foreground/80 hover:text-primary transition-colors font-medium py-2"
-                    >
-                      Home
-                    </a>
-                    <a 
-                      href="/#converter" 
-                      className="text-foreground/80 hover:text-primary transition-colors font-medium py-2"
-                    >
-                      Date Converter
-                    </a>
-                    <a 
-                      href="/#calendar" 
-                      className="text-foreground/80 hover:text-primary transition-colors font-medium py-2"
-                    >
-                      Calendar
-                    </a>
-                  </div>
                 </div>
               </CardContent>
             </Card>

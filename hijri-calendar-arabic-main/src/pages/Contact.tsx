@@ -230,37 +230,6 @@ const Contact = () => {
                   </form>
                 </CardContent>
               </Card>
-
-              {/* Additional Support Information */}
-              <Card className="mt-6 border-islamic-blue/20">
-                <CardHeader>
-                  <CardTitle className="text-xl text-islamic-blue">
-                    Other Ways to Get Help
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="text-center p-4 border border-islamic-gold/20 rounded-lg">
-                      <h4 className="font-semibold mb-2 text-islamic-gold">Quick Help</h4>
-                      <p className="text-sm text-muted-foreground mb-4">
-                        For simple questions about using the site
-                      </p>
-                      <Button variant="outline" className="border-islamic-gold text-islamic-gold hover:bg-islamic-gold/10">
-                        User Guide
-                      </Button>
-                    </div>
-                    <div className="text-center p-4 border border-islamic-green/20 rounded-lg">
-                      <h4 className="font-semibold mb-2 text-islamic-green">Report an Issue</h4>
-                      <p className="text-sm text-muted-foreground mb-4">
-                        If you encounter a technical issue on the site
-                      </p>
-                      <Button variant="outline" className="border-islamic-green text-islamic-green hover:bg-islamic-green/10">
-                        Report a Bug
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
