@@ -61,6 +61,8 @@ const App = () => {
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/articles" element={<Articles />} />
                   <Route path="/articles/:id/:title" element={<ArticleDetail />} />
+                  <Route path="/converter" element={<Index scrollTo="converter" />} />
+                  <Route path="/calendar" element={<Index scrollTo="calendar" />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>

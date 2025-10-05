@@ -5,11 +5,33 @@ import HolidayCountdown from "@/components/HolidayCountdown";
 import IslamicGame from "@/components/IslamicGame";
 import FAQ from "@/components/FAQ";
 import StructuredData from "@/components/StructuredData";
+import React from "react";
 import { ArticleCard } from "@/components/ArticleCard";
 import { Button } from "@/components/ui/button";
 import { BookOpen, CalendarDays, Moon, Sun } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const Index = () => {
+interface IndexProps {
+  scrollTo?: string;
+}
+
+const Index = ({ scrollTo }: IndexProps) => {
+  // Handle scrolling to a specific section when component mounts
+  React.useEffect(() => {
+    if (scrollTo) {
+      const element = document.getElementById(scrollTo);
+      if (element) {
+        const headerOffset = 80; // Adjust based on your header height
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }, [scrollTo]);
   return (
     <div className="min-h-screen flex flex-col">
       <StructuredData />
@@ -119,15 +141,15 @@ const Index = () => {
                 <p className="text-muted-foreground mb-4">
                   Easily convert between Hijri and Gregorian dates. Simply select a date in either calendar, and our tool will automatically display the corresponding date in the other system.
                 </p>
-                <a 
-                  href="#converter" 
+                <Link 
+                  to="/converter" 
                   className="text-islamic-blue hover:underline font-medium inline-flex items-center"
                 >
                   Try Date Converter
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </a>
+                </Link>
               </div>
 
               <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
@@ -136,15 +158,15 @@ const Index = () => {
                 <p className="text-muted-foreground mb-4">
                   Browse through months and years in both Hijri and Gregorian calendars. Our interactive calendar highlights important Islamic dates and events for easy reference.
                 </p>
-                <a 
-                  href="#calendar" 
+                <Link 
+                  to="/calendar" 
                   className="text-islamic-blue hover:underline font-medium inline-flex items-center"
                 >
                   View Calendar
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </a>
+                </Link>
               </div>
 
               <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
@@ -153,15 +175,15 @@ const Index = () => {
                 <p className="text-muted-foreground mb-4">
                   Never miss an important Islamic event. Our countdown shows you how many days remain until the next major Islamic holiday or significant date.
                 </p>
-                <a 
-                  href="#holiday-countdown" 
+                <Link 
+                  to="/#holiday-countdown" 
                   className="text-islamic-blue hover:underline font-medium inline-flex items-center"
                 >
                   See Countdown
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

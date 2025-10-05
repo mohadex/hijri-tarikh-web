@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,15 +19,15 @@ const Footer = () => {
           <div className="text-center">
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <div className="space-y-2">
-              <a href="#" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+              <Link to="/" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 Home
-              </a>
-              <a href="#converter" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+              </Link>
+              <Link to="/converter" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 Date Converter
-              </a>
-              <a href="#calendar" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+              </Link>
+              <Link to="/calendar" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 Monthly Calendar
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -34,15 +35,15 @@ const Footer = () => {
           <div className="text-center md:text-end">
             <h4 className="font-semibold mb-4">Legal</h4>
             <div className="space-y-2">
-              <a href="/privacy" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+              <Link to="/privacy" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 Privacy Policy
-              </a>
-              <a href="/about" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+              </Link>
+              <Link to="/about" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 About Us
-              </a>
-              <a href="/contact" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+              </Link>
+              <Link to="/contact" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>
