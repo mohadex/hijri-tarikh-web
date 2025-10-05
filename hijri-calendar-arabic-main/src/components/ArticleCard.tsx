@@ -22,8 +22,18 @@ export const ArticleCard = ({
   category,
   imageUrl
 }: ArticleCardProps) => {
+  // Function to create URL-friendly slug from title
+  const createSlug = (text: string) => {
+    return text
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '') // Remove special characters
+      .trim()
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/--+/g, '-'); // Replace multiple hyphens with single hyphen
+  };
+
   return (
-    <Link to={`/articles/${id || '1'}`} className="block h-full group">
+    <Link to={`/articles/${id || '1'}/${createSlug(title)}`} className="block h-full group">
       <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300">
         <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
           {imageUrl ? (

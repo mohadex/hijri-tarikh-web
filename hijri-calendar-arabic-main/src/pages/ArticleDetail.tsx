@@ -1,12 +1,32 @@
 import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, CalendarDays, Clock, Share2 } from "lucide-react";
 import { articles } from './Articles';
 
 export default function ArticleDetail() {
-  const { id } = useParams<{ id: string }>();
+  const { id, title: urlTitle } = useParams<{ id: string; title?: string }>();
   const navigate = useNavigate();
   const article = articles.find(a => a.id.toString() === id);
+  
+  // If the URL title doesn't match the article's title, redirect to the correct URL
+  useEffect(() => {
+    if (article && urlTitle) {
+      const createSlug = (text: string) => {
+        return text
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, '')
+          .trim()
+          .replace(/\s+/g, '-')
+          .replace(/--+/g, '-');
+      };
+      
+      const expectedSlug = createSlug(article.title);
+      if (urlTitle !== expectedSlug) {
+        navigate(`/articles/${id}/${expectedSlug}`, { replace: true });
+      }
+    }
+  }, [article, id, urlTitle, navigate]);
 
   // Handle clicks on internal links and table of contents
   const handleArticleClick = (e: React.MouseEvent<HTMLDivElement>) => {
