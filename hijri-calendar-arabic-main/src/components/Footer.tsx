@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="text-center md:text-end">
             <h4 className="font-semibold mb-4">Legal</h4>
             <div className="space-y-2">
-              <Link to="/privacy" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+              <Link to="/privacy-policy" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 Privacy Policy
               </Link>
               <Link to="/about" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
